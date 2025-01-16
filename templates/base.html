@@ -1,0 +1,16 @@
+<html lang="en">
+{% block init %}
+    {% set current_nav = "5" %} <!-- highlighted button in navbar -->
+    {% set title = "title" %}
+{% endblock init %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block body %}
+        <h1>{{ x }} hi</h1>
+    {% endblock body %}
+</body>
+</html>
