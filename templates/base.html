@@ -1,16 +1,32 @@
-<html lang="en">
+<!-- TODO: fix init vars -->
 {% block init %}
-    {% set current_nav = "5" %} <!-- highlighted button in navbar -->
-    {% set title = "title" %}
+    {% set tab_title = "Home" %}
 {% endblock init %}
+
+{% set current_nav = "home" %} <!-- highlighted button in navbar -->
+{% set tab_title = "title" %}
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/base.css">
+    <title>{{ tab_title }}</title>
 </head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="" class="home">
+                    <img src="/xlogo1.svg" alt="" srcset="">
+            </a></li>
+            <li><a href="" class="blogs">blogs</a></li>
+            <li><a href="" class="about">about</a></li>
+        </ul>
+    </nav>
+</header>
+
 <body>
     {% block body %}
-        <h1>{{ x }} hi</h1>
     {% endblock body %}
 </body>
 </html>

@@ -1,61 +1,20 @@
-<header>
-    <nav>
-        <ul>
-            <li><a href="" class="">blogs</a></li>
-            <li><a href="" class="">about</a></li>
-        </ul>
-    </nav>
-</header>
-<body>
+{% extends "base.html" %}
+
+{% block init %}
+    {% set tab_title = "Home" %}
+{% endblock init %}
+
+{% block body %}
     <section id="main">
         <div class="profile-icon">
         </div>
-        <!-- <span>hi, I'm</span><h1 id="name">Xavier Ang</h1> -->
         <p>some placeholder text I'm putting here temporarily, for the time being, before I can think up a cool short introduction. here's a bit more text to fill out the paragraph even more.</p>
         <button id="explore">explore</button>
     </section>
-</body>
+{% endblock body %}
 
 <style>
 @import url("/fonts.css");
-
-header {
-    margin-top: 0;
-    width: 100%;
-}
-
-ul {
-    list-style-type: none;
-    display: flex;
-    align-items: space-between;
-    justify-content: space-between;
-}
-
-li {
-    padding: 0.5em 0.75em;
-    border-radius: 1.5em;
-    background-color: var(--color1);
-}
-
-li a {
-    text-decoration: none;
-    font-family: "Plex";
-    color: white;
-}
-
-body {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color5);
-    color: var(--color1);
-}
-
-#name {
-    display: inline
-}
 
 #main {
     width: 60vw;
@@ -83,3 +42,4 @@ p {
     font-family: "Poppins";
 }
 </style>
+
