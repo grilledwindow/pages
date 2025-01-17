@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
-{% block init %}
+{% block head %}
     {% set tab_title = "Home" %}
-{% endblock init %}
+    {{ super() }}
+{% endblock head %}
 
 {% block body %}
     <section id="main">

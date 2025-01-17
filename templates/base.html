@@ -1,18 +1,16 @@
-<!-- TODO: fix init vars -->
-{% block init %}
-    {% set tab_title = "Home" %}
-{% endblock init %}
-
-{% set current_nav = "home" %} <!-- highlighted button in navbar -->
-{% set tab_title = "title" %}
+{% set tab_title = "title" %} <!-- highlighted button in navbar -->
 
 <html lang="en">
+
 <head>
+    {% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/base.css">
     <title>{{ tab_title }}</title>
+    {% endblock head %}
 </head>
+
 <header>
     <nav>
         <ul>
