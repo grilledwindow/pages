@@ -1,27 +1,44 @@
 {% set tab_title = "title" %} <!-- highlighted button in navbar -->
-{% set css = "" %}
 
-<html lang="en">
+<!doctype html>
+<html lang="en" class="bg-[#F2F6E0]">
 
 <head>
     {% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/tw.css">
+    <link rel="stylesheet" href="/fonts.css">
     <title>{{ tab_title }}</title>
     {% endblock head %}
 </head>
 
-<header class="">
-    <nav>
-        <ul>
-            <li><a href="" class="home">
-                    <img src="/xlogo1.svg" alt="" srcset="">
-            </a></li>
-            <li class="nav"><a href="" class="blogs">blogs</a></li>
-            <li class="nav"><a href="" class="about">about</a></li>
-        </ul>
-    </nav>
+<header class="bg-[#e3ccb bg-[#E0EEC6 bg-[#E7EECF] w-full max-w-[960px] mx-auto">
+    <div class="h-1/3 flex items-center justify-center">
+        <!-- <h1 class="p-6 h-1/3 font-mono font-medium text-2xl">xavier ang</h1> -->
+        <div class="m-8 w-full h-4/5 font-medium text-4xl flex items-center justify-center">
+            <h1 class="text-center" style="font-family: bagnard">
+                xavier ang
+            </h1>
+        </div>
+    </div>
+
+        <!-- <div class="p-6 bg-white w-1/2"> -->
+        <!--     <h2 class="mb-6 font-mono text-xl">/contact</h2> -->
+        <!--     <a href="" class="block">LinkedIn</a> -->
+        <!--     <a href="">Github</a> -->
+        <!-- </div> -->
+    <!-- <nav> -->
+    <!--     <ul> -->
+    <!--         <li><a href="" class="home w-3"> -->
+    <!--                 <img src="/xlogo1.svg" alt="" srcset=""> -->
+    <!--         </a></li> -->
+    <!--         <li class="nav"><a href="" class="blogs">blogs</a></li> -->
+    <!--         <li class="nav"><a href="" class="about">about</a></li> -->
+    <!--     </ul> -->
+    <!-- </nav> -->
+
+    </div>
 </header>
 
 <body>
