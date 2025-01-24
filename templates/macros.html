@@ -32,11 +32,9 @@
 <div class="mt-6 p-4 rounded-lg border-2 border-gray-500 bg-[#F0F8E9f] bg-[#EBEECF]">
     <span class="block text-gray-800 text-lg" style="font-family: Poppins">{{ page.title }}</span>
     <span class=" text-gray-600">{{ page.date }}</span>
-    {% if taxonomies.tags %}
-        {% for tag in taxonomies.tags %}
-        <span class="pl-6 mr-2 text-gray-500">{{ tag }}</span>
-        {% endfor %}
-    {% endif %}
+    {% for tag in page.taxonomies.tags %}
+        <span class="ml-1 mr text-gray-500">{{ tag }}</span>
+    {% endfor %}
 </div>
 {% endmacro blog_link %}
 
