@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block head %}
+    {% set tab_title = "Tags" %}
+    {{ super() }}
+{% endblock head %}
+
+{% block body %}
+    {% for term in terms %}
+        {{ term.name }}
+        {% for page in term.pages %}
+        {{ page.path }}
+            {{ macros::blog_link(page=page) }}
+        {% endfor %}
+    {% endfor %}
+{% endblock body %}
