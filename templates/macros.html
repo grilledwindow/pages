@@ -29,16 +29,50 @@
 <!-- backlinks: []  -->
 
 {% macro blog_link(page) %}
-<div class="mt-6 p-4 rounded-lg border-2 border-gray-500 bg-[#F0F8E9f] bg-[#EBEECF]">
+<div
+    class="block mt-6 p-4 rounded-lg border-2 border-gray-500 border-[#x878d80] bg-[#F0F8E9f] bg-[#EBEECF] cursor-pointer hover:bg-[#E6E8C9]"
+    onclick={{ "location.href='" ~ page.path ~ "'" }}
+>
     <span class="block text-gray-800 text-lg" style="font-family: Poppins">{{ page.title }}</span>
-    <span class=" text-gray-600">{{ page.date }}</span>
-    {% for tag in page.taxonomies.tags %}
-        <span class="ml-1 mr text-gray-500">{{ tag }}</span>
-    {% endfor %}
+    <div class="mt-4 text-gray-600 w-full flex justify-between items-end">
+        <div class="text-sm space-y-2">
+            {% if page.taxonomies.series %}
+                {% for series in page.taxonomies.series %}
+                    <button class="rounded-full mr-2 py-1 px-3 bg-[#b5ca92] text-[#674d40]"><a href={{ "/series/" ~ series }} class="">{{ series }}</a></button>
+                {% endfor %}
+            {% endif %}
+            {% if page.taxonomies.tags %}
+                {% for tag in page.taxonomies.tags %}
+                    <button class="rounded-full mr-2 py-1 px-3 bg-[#d9dcc1] text-[#444]"><a href={{ "/tags/" ~ tag }} class="">{{ tag }}</a></button>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <span class="self-end mt-2 text-gray-600">{{ page.date | date(format="%e %b '%y") }}</span>
+    </div>
 </div>
 {% endmacro blog_link %}
 
-<!-- <div class="mt-6 p-4 rounded-lg border-2 border-gray-500 bg-[#F0F8E9f] bg-[#EDF0D7]"> -->
-<!--     <span class="block text-gray-800 text-lg" style="font-family: Poppins">An Interesting Title: Part I</span> -->
-<!--     <span class="block text-gray-500">#tags</span> -->
+<!-- Alternative element with divider between title and tags/date sections -->
+
+<!-- <div class="mt-6 rounded-lg  bg-[#F0F8E9f] bg-[#EBEECF]"> -->
+<!--     <div class="p-4 rounded-t-lg border-2 border-b-0 border-gray-500"> -->
+<!--         <span class="block text-gray-800 text-lg" style="font-family: Poppins">{{ page.title }}</span> -->
+        <!-- <span class="block mt-2 text-gray-600">{{ page.date }}</span> -->
+<!--     </div> -->
+<!--     <div class="border-2 border-gray-500 border-t- rounded-b-lg px-4 py-2 text-gray-600 w-full flex justify-between items-end"> -->
+<!--         <div class="text-sm space-x-2"> -->
+<!--             {% if page.taxonomies.series %} -->
+<!--                 {% for series in page.taxonomies.series %} -->
+<!--                     <button class="rounded-full py-1 px-3 bg-[#b5ca92] text-[#674d40]"><a href={{ "/series/" ~ series }} class="">{{ series }}</a></button> -->
+<!--                 {% endfor %} -->
+<!--             {% endif %} -->
+<!--             {% if page.taxonomies.tags %} -->
+<!--                 {% for tag in page.taxonomies.tags %} -->
+<!--                     <button class="rounded-full py-1 px-3 bg-[#d9dcc1] text-[#444]"><a href={{ "/tags/" ~ tag }} class="">{{ tag }}</a></button> -->
+<!--                 {% endfor %} -->
+<!--             {% endif %} -->
+<!--         </div> -->
+<!--         <span class="self-end mt-2 text-gray-600">{{ page.date | date(format="%e %b '%y") }}</span> -->
+<!--     </div> -->
 <!-- </div> -->
+
