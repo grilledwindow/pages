@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block head %}
+    {% set tab_title = "All Posts" %}
+    {{ super() }}
+{% endblock head %}
+
+{% block body %}
+    {% for page in paginator.pages %}
+        {{ macros::blog_link(page=page) }}
+    {% endfor %}
+
+    <div class="w-full mt-16 flex justify-center space-x-2">
+        {% set curr = paginator.current_index %}
+        {% set total = paginator.number_pagers %}
+
+        {% set start = 1 %}
+        {% if curr > 2 %}
+            {% set start = curr - 2 %}
+        {% endif %}
+
+        {% set end = total %}
+        {% if total > curr + 2 %}
+            {% set end = curr + 2 %}
+        {% endif %}
+
+        {% if paginator.previous %}
+            <button class="h-[2em] w-[2em] text-center rounded-full bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ paginator.previous }} class=""><-</a></button>
+        {% endif %}
+
+        {% for i in range(start=start, end=end + 1) %}
+            {% if curr == i %}
+                <button class="h-[2em] w-[2em] text-center rounded-full bg-[#94BA99] hover:bg-[#889a92] text-[#142E26]"><a href={{ paginator.base_url ~ i }} class="">{{ i }}</a></button>
+            {% else %}
+                <button class="h-[2em] w-[2em] text-center rounded-full bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ paginator.base_url ~ i }} class="">{{ i }}</a></button>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next %}
+        <button class="h-[2em] w-[2em] text-center rounded-full bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ paginator.next }} class="">-></a></button>
+        {% endif %}
+    </div>
+{% endblock body %}
+
