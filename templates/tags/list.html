@@ -1,5 +1,4 @@
-{% extends "base.html" %}
-{% import "macros.html" as macros %}
+{% extends "taxonomy_list.html" %}
 
 {% block head %}
     {% set tab_title = "Tags" %}
@@ -7,17 +6,6 @@
 {% endblock head %}
 
 {% block body %}
-    <h1 class="mb-6 font-mono font-bold text-3xl"><span class="text-[#bbb]">/</span>tags</h1>
-    <p class="text-lg text-gray-600 font-light">Blog posts grouped by tags.</p>
-    {% for term in terms %}
-        <h2 class="mt-10 text-3xl font-serif">{{ term.name }}</h2>
-        {% set pages = term.pages %}
-        {% set slice = 5 %}
-        {% for page in pages | slice(end=slice) %}
-            {{ macros::blog_link(page=page) }}
-        {% endfor %}
-        {% if pages | length > slice %}
-            <button class="bg-[#63474d] text-white mt-10 p-2 px-3 rounded-full"><a href={{ term.path }} class="decoration-none">see all -></a></button>
-        {% endif %}
-    {% endfor %}
+    {% set term = "tags" %}
+    {{ super() }}
 {% endblock body %}
