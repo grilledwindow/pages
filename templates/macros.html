@@ -38,12 +38,12 @@
         <div class="text-sm space-y-2">
             {% if page.taxonomies.series %}
                 {% for series in page.taxonomies.series %}
-                    <button class="rounded-full mr-2 py-1 px-3 bg-[#b5ca92] text-[#674d40]"><a href={{ "/series/" ~ series }} class="">{{ series }}</a></button>
+                    <button class="rounded-full mr-2 py-1 px-3 bg-[#b5ca92] hover:bg-[#adc28a] text-[#674d40]"><a href={{ "/series/" ~ series }} class="">{{ series }}</a></button>
                 {% endfor %}
             {% endif %}
             {% if page.taxonomies.tags %}
                 {% for tag in page.taxonomies.tags %}
-                    <button class="rounded-full mr-2 py-1 px-3 bg-[#d9dcc1] text-[#444]"><a href={{ "/tags/" ~ tag }} class="">{{ tag }}</a></button>
+                    <button class="rounded-full mr-2 py-1 px-3 bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ "/tags/" ~ tag }} class="">{{ tag }}</a></button>
                 {% endfor %}
             {% endif %}
         </div>
