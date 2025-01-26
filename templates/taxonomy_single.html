@@ -47,7 +47,7 @@
 
         {% for i in range(start=start, end=end + 1) %}
             {% if curr == i %}
-                <button class="h-[2em] w-[2em] text-center rounded-full bg-[#94BA99] hover:bg-[#889a92] text-[#142E26]"><a href={{ paginator.base_url ~ i }} class="">{{ i }}</a></button>
+                <button class="h-[2em] w-[2em] text-center rounded-full bg-[#B9CdA8] hover:bg-[#a1b590] text-[#435337]"><a href={{ paginator.base_url ~ i }} class="">{{ i }}</a></button>
             {% else %}
                 <button class="h-[2em] w-[2em] text-center rounded-full bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ paginator.base_url ~ i }} class="">{{ i }}</a></button>
             {% endif %}
