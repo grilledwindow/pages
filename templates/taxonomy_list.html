@@ -5,6 +5,13 @@
 {% block body %}
     <h1 class="mb-6 font-mono font-bold text-3xl"><span class="text-[#bbb]">/</span>{{ term }}</h1>
     <p class="text-lg text-gray-600 font-light">Blog posts grouped by {{ term }}.</p>
+
+    <div class="mt-8">
+        {% for term in terms %}
+            <button class="bg-[#cddcc1] hover:bg-[#bdccb1] text-[#5b6b50] mt-3 mr-3 p-2 px-3 rounded-full"><a href={{ term.path }} class="decoration-none">{{ term.name ~ " (" ~ term.page_count ~ ")" }}</a></button>
+        {% endfor %}
+    </div>
+
     {% for term in terms %}
         <h2 class="mt-10 text-3xl font-serif">{{ term.name }}</h2>
         {% set pages = term.pages %}
