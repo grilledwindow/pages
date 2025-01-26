@@ -9,7 +9,7 @@ build_search_index = true
 
 taxonomies = [
     { name = "tags", paginate_by = 20 },
-    { name = "series" }
+    { name = "series", paginate_by = 20 }
 ]
 
 [markdown]
