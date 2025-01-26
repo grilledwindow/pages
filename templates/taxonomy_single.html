@@ -2,11 +2,27 @@
 {% import "macros.html" as macros %}
 
 {% block head %}
-    {% set tab_title = "All Posts" %}
+    {% set tab_title = taxonomy.name ~ ": " ~ term.name | capitalize %}
     {{ super() }}
 {% endblock head %}
 
 {% block body %}
+    <h1 class="mb-6 font-mono font-bold text-3xl"><span class="text-[#bbb]">/</span>{{ taxonomy.name }}</h1>
+    <!-- <p class="text-lg text-gray-600 font-light">Blog posts grouped by {{ taxonomy.name }}.</p> -->
+
+    <div class="mt-8 mb-12">
+        {% set main_term_name = term.name %} <!-- to prevent confusion with loop variable `term` below -->
+        {% set taxonomy = get_taxonomy(kind=taxonomy.name) %}
+        {% set terms = taxonomy.items %}
+        {% for term in terms %}
+        {% if term.name == main_term_name %}
+            <button class="bg-[#B1C5A0] hover:bg-[#a1b590] text-[#4b5b40] mt-3 mr-3 p-2 px-3 rounded-full"><a href={{ term.path }} class="decoration-none">{{ term.name ~ " (" ~ term.page_count ~ ")" }}</a></button>
+        {% else %}
+            <button class="bg-[#cddcc1] hover:bg-[#bdccb1] text-[#5b6b50] mt-3 mr-3 p-2 px-3 rounded-full"><a href={{ term.path }} class="decoration-none">{{ term.name ~ " (" ~ term.page_count ~ ")" }}</a></button>
+        {% endif %}
+        {% endfor %}
+    </div>
+
     {% for page in paginator.pages %}
         {{ macros::blog_link(page=page) }}
     {% endfor %}
