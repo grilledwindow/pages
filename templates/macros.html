@@ -1,5 +1,5 @@
-{% macro link(label="undefined", link="") %}
-    <a class="hover:text-[#6d724c] text-[#8d926c] underline decoration-[#adb296] decoration-2" href="{{ link | safe }}" target="_blank">{{ label }}</a>
+{% macro link(label="undefined", link="", css="") %}
+<a class="hover:text-[#6d724c] text-[#8d926c] underline decoration-[#adb296] decoration-2 {{ css }}" href="{{ link | safe }}" target="_blank">{{ label }}</a>
 {% endmacro link %}
 <!-- relative_path: blog/build-the-site.md -->
 <!-- colocated_path: -->
