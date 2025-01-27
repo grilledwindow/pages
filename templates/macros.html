@@ -1,3 +1,6 @@
+{% macro link(label="undefined", link="") %}
+    <a class="hover:text-[#6d724c] text-[#8d926c] underline decoration-[#adb296] decoration-2" href="{{ link | safe }}" target="_blank">{{ label }}</a>
+{% endmacro link %}
 <!-- relative_path: blog/build-the-site.md -->
 <!-- colocated_path: -->
 <!-- content: <p>This website was built with the Zola static site generator. What Zola does is it turns Markdown files into HTML pages based on user-defined templates.</p> -->
@@ -38,7 +41,7 @@
         <div class="text-sm space-y-2">
             {% if page.taxonomies.series %}
                 {% for series in page.taxonomies.series %}
-                    <button class="rounded-full mr-2 py-1 px-3 bg-[#b5ca92] hover:bg-[#adc28a] text-[#674d40]"><a href={{ "/series/" ~ series }} class="">{{ series }}</a></button>
+                    <button class="rounded-full mr-2 py-1 px-3 bg-[#b5ca92] hover:bg-[#adc28a] text-[#674d40] bg-[#B9CdA8] hover:bg-[#a1b590] text-[#435337]"><a href={{ "/series/" ~ series }} class="">{{ series }}</a></button>
                 {% endfor %}
             {% endif %}
             {% if page.taxonomies.tags %}
@@ -47,7 +50,7 @@
                 {% endfor %}
             {% endif %}
         </div>
-        <span class="self-end mt-2 text-gray-600">{{ page.date | date(format="%e %b '%y") }}</span>
+        <span class="self-end mt-2 text-gray-600 text-right">{{ page.date | date(format="%e %b '%y") }}</span>
     </div>
 </div>
 {% endmacro blog_link %}
