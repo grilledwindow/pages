@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p {
+    @apply mt-2 text-lg text-gray-700
+}
+
+h1.blog-title, h2, h3, h4, h5, h6 {
+    @apply mt-8 mb-4 h-fit font-medium relative align-bottom;
+    font-family: Cotham;
+}
+
+h1.blog-title {
+    font-family: Inter;
+    @apply mt-0;
+}
+
+h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    @apply opacity-60 w-4 absolute left-[-2.5rem];
+}
+
+h1.blog-title::before {
+    content: 'h1';
+    font-family: Cotham;
+    @apply text-[60%] top-[10%];
+}
+
+h2::before {
+    content: 'h2';
+    @apply text-[60%] top-[6%];
+}
+
+h3::before {
+    content: 'h3';
+    @apply text-[70%] top-[7%];
+}
+
+h4::before, h5::before, h6::before {
+    @apply text-[80%] top-[4%];
+}
+
+h4::before { content: 'h4' }
+h5::before { content: 'h5' }
+h6::before { content: 'h6' }
+
+h2 {
+    @apply text-4xl text-[#4D2B09]
+}
+
+h3 {
+    @apply text-3xl text-[#2E3419]
+}
+
+h4, h5, h6 {
+    @apply mb-2 text-2xl text-[#333]
+}

@@ -1,9 +1,12 @@
-<h1>{{ page.title }}</h1>
+{% extends "base.html" %}
 
-<body>{{ page.content | safe }}</body>
+{% block head %}
+    {% set tab_title = page.title %}
+    {{ super() }}
+{% endblock head %}
 
-{% if page.extra["js"] %}
-    {% for js in page.extra["js"] %}
-        <script src={{ js }}></script>
-    {% endfor %}
-{% endif %}
+{% block body %}
+    <h1 class="blog-title text-4xl">{{ page.title }}</h1>
+    {{ page.content | safe }}
+{% endblock body %}
+
