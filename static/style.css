@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 p {
-    @apply mt-2 text-lg text-gray-700
+    @apply mt-8 text-lg/8 text-gray-700
 }
 
 h1.blog-title, h2, h3, h4, h5, h6 {
-    @apply mt-8 mb-4 h-fit font-medium relative align-bottom;
+    @apply mt-10 mb-4 h-fit font-medium relative align-bottom;
     font-family: Cotham;
 }
 
