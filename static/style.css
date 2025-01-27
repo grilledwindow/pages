@@ -13,7 +13,6 @@ h1.blog-title, h2, h3, h4, h5, h6 {
 
 h1.blog-title {
     font-family: Inter;
-    @apply mt-0;
 }
 
 h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::before {
@@ -23,21 +22,21 @@ h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::befor
 h1.blog-title::before {
     content: 'h1';
     font-family: Cotham;
-    @apply text-[60%] top-[10%];
+    @apply text-[60%] top-[0.44rem];
 }
 
 h2::before {
     content: 'h2';
-    @apply text-[60%] top-[6%];
+    @apply text-[60%] top-[0.187rem];
 }
 
 h3::before {
     content: 'h3';
-    @apply text-[70%] top-[7%];
+    @apply text-[70%] top-[0.21rem];
 }
 
 h4::before, h5::before, h6::before {
-    @apply text-[80%] top-[4%];
+    @apply text-[80%] top-[0.05rem];
 }
 
 h4::before { content: 'h4' }
