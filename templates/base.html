@@ -1,3 +1,4 @@
+{% import "macros.html" as macros %}
 {% set tab_title = "title" %} <!-- highlighted button in navbar -->
 
 <!doctype html>
@@ -27,9 +28,34 @@
             </ul>
         </div>
     </header>
-    <main class="py-6 px-16 max-w-[1200px] mx-auto">
+    <main class="pt-6 pb-10 px-16 max-w-[1200px] mx-auto">
         {% block body %}
         {% endblock body %}
     </main>
+    <footer class="bg-[#E7EECF] w-full h-1/5 py-12 px-16 text-gray-600">
+        <div class="max-w-[1200px] mx-auto flex flex-col items-end">
+            <section class="flex justify-end w-full">
+                <div class="flex flex-col items-start mr-12">
+                    <span class="">Blog</span>
+                    {{ macros::link(label="Series", link="/series", target="") }}
+                    {{ macros::link(label="Tags", link="/tags", target="") }}
+                </div>
+                <div class="flex flex-col items-start mr-12">
+                    <span class="">Others</span>
+                    {{ macros::link(label="Home", link="/", target="") }}
+                    {{ macros::link(label="About", link="/about", target="") }}
+                </div>
+                <div class="flex flex-col items-start">
+                    <span class="">Socials</span>
+                    {{ macros::link(label="LinkedIn", link="https://www.linkedin.com/in/xave") }}
+                    {{ macros::link(label="Github", link="https://github.com/grilledwindow") }}
+                </div>
+            </section>
+            <p class="text-md text-gray-600 mt-8 text-end">
+                <!-- Made with {{macros::link(label="Zola", link="https://www.getzola.org/") }} & {{ macros::link(label="Tailwind", link="https://tailwindcss.com/") }}<br /> -->
+                {{ macros::link(label="Source code", link="https://github.com/grilledwindow/pages", css="block mt-2") }}
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
