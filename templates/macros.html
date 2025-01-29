@@ -1,6 +1,11 @@
-{% macro link(label="undefined", link="", css="") %}
-    <a class="text-[#8d926c] hover:text-[#4d522c] decoration-[#adb296] hover:bg-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target="_blank">{{ label }}</a>
+{% macro link(label="undefined", link="", css="", target="_blank") %}
+<a class="text-[#8d926c] hover:text-[#4d522c] decoration-[#adb296] hover:bg-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
 {% endmacro link %}
+
+{% macro footer_link(label="undefined", link="", css="", target="_blank") %}
+<a class="text-[#bbb] hover:text-[#4d522c] decoration-[#aaa] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
+{% endmacro footer_link %}
+
 <!-- relative_path: blog/build-the-site.md -->
 <!-- colocated_path: -->
 <!-- content: <p>This website was built with the Zola static site generator. What Zola does is it turns Markdown files into HTML pages based on user-defined templates.</p> -->
@@ -33,10 +38,10 @@
 
 {% macro blog_link(page) %}
 <div
-    class="block mt-6 p-4 rounded-lg border-2 border-gray-500 border-[#x878d80] bg-[#F0F8E9f] bg-[#EBEECF] cursor-pointer hover:bg-[#E6E8C9]"
+    class="block mt-6 p-4 rounded-lg border-2 border-gray-00 border-[#898083] bg-[#CFD7BA] cursor-pointer hover:bg-[#DBE2C7]"
     onclick={{ "location.href='" ~ page.path ~ "'" }}
 >
-    <span class="block text-gray-800 text-lg" style="font-family: Poppins">{{ page.title }}</span>
+    <span class="block text-gray-800 text-xl" style="font-family: Poppins">{{ page.title }}</span>
     <div class="mt-4 text-gray-600 w-full flex justify-between items-end">
         <div class="text-sm space-y-2">
             {% if page.taxonomies.series %}
