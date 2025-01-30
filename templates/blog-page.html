@@ -22,5 +22,9 @@
         <span class="block">{{ page.date | date(format="%e %b %Y") }}<span class="mx-2">•</span>{{ page.reading_time ~ " min read" }}</span>
     </section>
     {{ page.content | safe }}
+
+    <div class="mt-20">
+        {{ macros::link(label="back to all blogs", link="/blog") }}
+    </div>
 {% endblock body %}
 
