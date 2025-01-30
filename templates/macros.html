@@ -1,7 +1,7 @@
 {% import "components/buttons.html" as buttons %}
 
 {% macro link(label="undefined", link="", css="", target="_blank") %}
-<a class="text-[#8d926c] hover:text-[#4d522c] decoration-[#adb296] hover:bg-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
+<a class="text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] decoration-[#adb296 hover:bg-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
 {% endmacro link %}
 
 {% macro footer_link(label="undefined", link="", css="", target="_blank") %}
@@ -43,12 +43,14 @@
     class="block mt-6 p-4 rounded-lg border-[2.8px] border-gray-00 border-[#A09F92] bg-[#D0D6B8] hover:bg-[#C8CEB2] cursor-pointer"
     onclick={{ "location.href='" ~ page.path ~ "'" }}
 >
-    <span class="block text-gray-800 text-xl" style="font-family: Poppins">{{ page.title }}</span>
+    <span class="block text-[#363538] text-xl" style="font-family: Poppins">{{ page.title }}</span>
     <div class="mt-4 text-gray-600 w-full flex justify-between items-end">
         <div class="text-sm space-y-2">
+<!--cdc2af -->
             {% if page.taxonomies.series %}
                 {% for series in page.taxonomies.series %}
-                    {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#435337]") }}
+                    {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA5] hover:bg-[#BFBD95] text-[#6F6D45]") }}
+
                 {% endfor %}
             {% endif %}
             {% if page.taxonomies.tags %}
@@ -57,7 +59,7 @@
                 {% endfor %}
             {% endif %}
         </div>
-        <span class="self-end mt-2 text-gray-600 text-right">{{ page.date | date(format="%e %b '%y") }}</span>
+        <span class="self-end mt-2 text-[#807070] text-right">{{ page.date | date(format="%e %b '%y") }}</span>
     </div>
 </div>
 {% endmacro blog_link %}

@@ -8,17 +8,21 @@
 
 {% block body %}
     <h1 class="mb-6 font-mono font-bold text-3xl"><span class="text-[#bbb]">/</span>{{ taxonomy.name }}</h1>
-    <!-- <p class="text-lg text-gray-600 font-light">Blog posts grouped by {{ taxonomy.name }}.</p> -->
+    {% set other_group = "tags" %}
+    {% if taxonomy.name == "tags" %}
+        {% set other_group = "series" %}
+    {% endif %}
+    <p class="text-lg text-gray-600 font-light">Blogs grouped by {{ taxonomy.name }}. View {{ macros::link(label=other_group | capitalize, link="/" ~ other_group, target="") }} instead.</p>
 
-    <div class="mt-8 mb-12">
+    <div class="mt-8 mb-12 flex items-center">
         {% set main_term_name = term.name %} <!-- to prevent confusion with loop variable `term` below -->
         {% set taxonomy = get_taxonomy(kind=taxonomy.name) %}
         {% set terms = taxonomy.items %}
         {% for term in terms %}
         {% if term.name == main_term_name %}
-            <button class="bg-[#B1C5A0] hover:bg-[#a1b590] text-[#4b5b40] mt-3 mr-3 p-2 px-3 rounded-full"><a href={{ term.path }} class="decoration-none">{{ term.name ~ " (" ~ term.page_count ~ ")" }}</a></button>
+            <button class="bg-[#B9BCB7] hover:bg-[#B4BA9D] text-[#3b4b30] mt-3 mr-3 p-2 px-3 rounded-full"><a href={{ term.path }} class="decoration-none">{{ term.name ~ " (" ~ term.page_count ~ ")" }}</a></button>
         {% else %}
-            <button class="bg-[#cddcc1] hover:bg-[#bdccb1] text-[#5b6b50] mt-3 mr-3 p-2 px-3 rounded-full"><a href={{ term.path }} class="decoration-none">{{ term.name ~ " (" ~ term.page_count ~ ")" }}</a></button>
+            <button class="bg-[#C4CAAD] hover:bg-[#B4BA9D] text-[#333] mt-3 mr-3 p-2 px-3 rounded-full"><a href={{ term.path }} class="decoration-none">{{ term.name ~ " (" ~ term.page_count ~ ")" }}</a></button>
         {% endif %}
         {% endfor %}
     </div>
@@ -42,19 +46,19 @@
         {% endif %}
 
         {% if paginator.previous %}
-            <button class="h-[2em] w-[2em] text-center rounded-full bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ paginator.previous }} class=""><-</a></button>
+            <button class="h-[2em] w-[2em] text-center rounded-full bg-[#C4CAAD] hover:bg-[#B4BA9D] text-[#444]"><a href={{ paginator.previous }} class=""><-</a></button>
         {% endif %}
 
         {% for i in range(start=start, end=end + 1) %}
             {% if curr == i %}
-                <button class="h-[2em] w-[2em] text-center rounded-full bg-[#B9CdA8] hover:bg-[#a1b590] text-[#435337]"><a href={{ paginator.base_url ~ i }} class="">{{ i }}</a></button>
+                <button class="h-[2em] w-[2em] text-center rounded-full bg-[#B8BEA1] hover:bg-[#A8AE91] text-[#435337]"><a href={{ paginator.base_url ~ i }} class="">{{ i }}</a></button>
             {% else %}
-                <button class="h-[2em] w-[2em] text-center rounded-full bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ paginator.base_url ~ i }} class="">{{ i }}</a></button>
+                <button class="h-[2em] w-[2em] text-center rounded-full bg-[#C4CAAD] hover:bg-[#B4BA9D] text-[#444]"><a href={{ paginator.base_url ~ i }} class="">{{ i }}</a></button>
             {% endif %}
         {% endfor %}
 
         {% if paginator.next %}
-        <button class="h-[2em] w-[2em] text-center rounded-full bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ paginator.next }} class="">-></a></button>
+        <button class="h-[2em] w-[2em] text-center rounded-full bg-[#C4CAAD] hover:bg-[#B4BA9D] text-[#444]"><a href={{ paginator.next }} class="">-></a></button>
         {% endif %}
     </div>
 {% endblock body %}
