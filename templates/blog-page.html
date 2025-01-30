@@ -7,34 +7,19 @@
 {% endblock head %}
 
 {% block body %}
-            {% if page.taxonomies.series %}
-                {% for series in page.taxonomies.series %}
-                    <button class="rounded-full mr-2 mt-2 py-1 px-3 bg-[#b5ca92] hover:bg-[#adc28a] text-[#674d40] bg-[#B9CdA8] hover:bg-[#a1b590] text-[#435337]"><a href={{ "/series/" ~ series }} class="">{{ series }}</a></button>
-                {% endfor %}
-            {% endif %}
-            {% if page.taxonomies.tags %}
-                {% for tag in page.taxonomies.tags %}
-                    <button class="rounded-full mr-2 mt-2 py-1 px-3 bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ "/tags/" ~ tag }} class="">{{ tag }}</a></button>
-                {% endfor %}
-            {% endif %}
+    {% if page.taxonomies.series %}
+        {% for series in page.taxonomies.series %}
+            {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#435337]") }}
+        {% endfor %}
+    {% endif %}
+    {% if page.taxonomies.tags %}
+        {% for tag in page.taxonomies.tags %}
+            {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
+        {% endfor %}
+    {% endif %}
     <h1 class="blog-title text-4xl mt-4">{{ page.title }}</h1>
     <section class="mt-8 text-gray-600 flex flex-col space-y-1" style="font-family: Inter">
         <span class="block">{{ page.date | date(format="%e %b %Y") }}<span class="mx-2">•</span>{{ page.reading_time ~ " min read" }}</span>
-        {% set tax = page.taxonomies %}
-        <!-- {% if tax.series %} -->
-        <!--     <span>Series:  -->
-        <!--     {% for series in tax.series %} -->
-        <!--         {{ macros::link(label=series, link="/series/" ~ series, css="text-[#444] mr-1") }} -->
-        <!--     {% endfor %} -->
-        <!--     </span> -->
-        <!-- {% endif %} -->
-        <!-- {% if tax.tags %} -->
-        <!--     <span>Tags:  -->
-        <!--     {% for tag in tax.tags %} -->
-        <!--         {{ macros::link(label=tag, link="/tags/" ~ tag, css="text-[#444] mr-1") }} -->
-        <!--     {% endfor %} -->
-        <!--     </span> -->
-        <!-- {% endif %} -->
     </section>
     {{ page.content | safe }}
 {% endblock body %}

@@ -1,3 +1,5 @@
+{% import "components/buttons.html" as buttons %}
+
 {% macro link(label="undefined", link="", css="", target="_blank") %}
 <a class="text-[#8d926c] hover:text-[#4d522c] decoration-[#adb296] hover:bg-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
 {% endmacro link %}
@@ -38,7 +40,7 @@
 
 {% macro blog_link(page) %}
 <div
-    class="block mt-6 p-4 rounded-lg border-2 border-gray-00 border-[#898083] bg-[#CFD7BA] cursor-pointer hover:bg-[#DBE2C7]"
+    class="block mt-6 p-4 rounded-lg border-[2.8px] border-gray-00 border-[#A09F92] bg-[#D0D6B8] hover:bg-[#C8CEB2] cursor-pointer"
     onclick={{ "location.href='" ~ page.path ~ "'" }}
 >
     <span class="block text-gray-800 text-xl" style="font-family: Poppins">{{ page.title }}</span>
@@ -46,12 +48,12 @@
         <div class="text-sm space-y-2">
             {% if page.taxonomies.series %}
                 {% for series in page.taxonomies.series %}
-                    <button class="rounded-full mr-2 py-1 px-3 bg-[#b5ca92] hover:bg-[#adc28a] text-[#674d40] bg-[#B9CdA8] hover:bg-[#a1b590] text-[#435337]"><a href={{ "/series/" ~ series }} class="">{{ series }}</a></button>
+                    {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#435337]") }}
                 {% endfor %}
             {% endif %}
             {% if page.taxonomies.tags %}
                 {% for tag in page.taxonomies.tags %}
-                    <button class="rounded-full mr-2 py-1 px-3 bg-[#d9dcc1] hover:bg-[#d1d4b9] text-[#444]"><a href={{ "/tags/" ~ tag }} class="">{{ tag }}</a></button>
+                    {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
                 {% endfor %}
             {% endif %}
         </div>
