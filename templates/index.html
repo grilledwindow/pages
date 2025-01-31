@@ -18,7 +18,7 @@
             <p class="mt-6">
                 {% set n = 5 %}
                 Viewing latest {{ n }} - 
-                {{ macros::link(label="see all", link="/blog") }}
+                {{ macros::link(label="see all", link="/blog", target="") }}
             </p>
 
             {% set all_blogs = get_taxonomy_term(kind="tags", term="all") %}
