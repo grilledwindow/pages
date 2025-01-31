@@ -10,12 +10,12 @@
     <div class="flex flex-col" style="font-family: Inter">
         <div class="w-full">
             <h2 class="mb-6 mt-0 before:none"><span class="text-[#bbb]">/</span>about</h2>
-            <p class="text-lg text-gray-600 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam inventore, rerum ex ipsum in molestiae. Animi, voluptates ducimus. Nam culpa voluptatum iste unde architecto quisquam, quo numquam itaque mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam inventore, rerum ex ipsum in molestiae. Animi, voluptates ducimus. Nam culpa voluptatum iste unde architecto quisquam, quo numquam itaque mollitia.</p>
+            <p class="text-gray-600 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam inventore, rerum ex ipsum in molestiae. Animi, voluptates ducimus. Nam culpa voluptatum iste unde architecto quisquam, quo numquam itaque mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam inventore, rerum ex ipsum in molestiae. Animi, voluptates ducimus. Nam culpa voluptatum iste unde architecto quisquam, quo numquam itaque mollitia.</p>
             <button class="bg-[#adba8f] hover:bg-[#a5b288] text-[#5a663a] mt-10 p-2 px-3 rounded-full"><a href="" class="decoration-none">more -></a></button>
         </div>
         <div class="mt-16 w-full">
             <h2 class="mb-6 mt-0"><span class="text-[#bbb]">/</span>blogs</h2>
-            <p class="text-lg text-gray-600" style="font-family: Inter">Latest blogs</p>
+            <p class="text-gray-600" style="font-family: Inter">Latest blogs</p>
 
             {% set all_blogs = get_taxonomy_term(kind="tags", term="all") %}
             {% for page in all_blogs.pages | slice(end=5) %}
