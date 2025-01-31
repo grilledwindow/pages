@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-    @apply mt-8 text-lg/8 text-gray-700;
+    @apply mt-6 leading-7 text-gray-700;
 }
 
 h1.blog-title, h2, h3, h4, h5, h6 {
@@ -16,7 +16,7 @@ h1.blog-title {
 }
 
 h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::before {
-    @apply opacity-60 w-4 absolute left-[-2.5rem];
+    @apply opacity-60 w-4 absolute left-[-1.8rem] md:left-[-2.5rem];
 }
 
 h1.blog-title::before {
@@ -44,13 +44,13 @@ h5::before { content: 'h5'; }
 h6::before { content: 'h6'; }
 
 h2 {
-    @apply text-4xl text-[#4D2B09];
+    @apply text-3xl text-[#4D2B09];
 }
 
 h3 {
-    @apply text-3xl text-[#2E3419];
+    @apply text-2xl text-[#2E3419];
 }
 
 h4, h5, h6 {
-    @apply mb-2 text-2xl text-[#333];
+    @apply mb-2 text-xl text-[#333];
 }
