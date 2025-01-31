@@ -572,6 +572,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -622,14 +626,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .block {
@@ -811,9 +807,9 @@ video {
   background-color: rgb(207 205 165 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#D0D6B8\] {
+.bg-\[\#D8DEC0\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(208 214 184 / var(--tw-bg-opacity, 1));
+  background-color: rgb(216 222 192 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#DCE4C7\] {
@@ -845,32 +841,12 @@ video {
   background-color: rgb(217 220 193 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#E0E6C8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(224 230 200 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#D8DEC8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(216 222 200 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#D8DEC0\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(216 222 192 / var(--tw-bg-opacity, 1));
-}
-
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-4 {
   padding: 1rem;
-}
-
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 .px-3 {
@@ -881,6 +857,11 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .py-1 {
@@ -898,9 +879,9 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-10 {
@@ -909,10 +890,6 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pb-16 {
-  padding-bottom: 4rem;
 }
 
 .text-center {
@@ -939,11 +916,6 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-lg {
@@ -1061,7 +1033,6 @@ video {
 
 p {
   margin-top: 2rem;
-  font-size: 1.125rem;
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
@@ -1084,9 +1055,15 @@ h1.blog-title {
 
 h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   position: absolute;
-  left: -2.5rem;
+  left: -1.6rem;
   width: 1rem;
   opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    left: -2.5rem;
+  }
 }
 
 h1.blog-title::before {
@@ -1126,23 +1103,23 @@ h6::before {
 }
 
 h2 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   --tw-text-opacity: 1;
   color: rgb(77 43 9 / var(--tw-text-opacity, 1));
 }
 
 h3 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(46 52 25 / var(--tw-text-opacity, 1));
 }
 
 h4, h5, h6 {
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity, 1));
 }
@@ -1167,14 +1144,14 @@ h4, h5, h6 {
   background-color: rgb(191 189 149 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-\[\#C8CEB2\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(200 206 178 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-\[\#C9C79A\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(201 199 154 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#D0D6B8\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 214 184 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-\[\#a5b288\]:hover {
@@ -1187,11 +1164,6 @@ h4, h5, h6 {
   background-color: rgb(173 178 150 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-\[\#D0D6B8\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(208 214 184 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:text-\[\#4d522c\]:hover {
   --tw-text-opacity: 1;
   color: rgb(77 82 44 / var(--tw-text-opacity, 1));
@@ -1199,4 +1171,20 @@ h4, h5, h6 {
 
 .hover\:decoration-\[\#adb296\]:hover {
   text-decoration-color: #adb296;
+}
+
+@media (min-width: 768px) {
+  .md\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
