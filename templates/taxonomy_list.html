@@ -19,7 +19,7 @@
     {% for term in terms %}
         <h2 class="mt-10 text-3xl">{{ term.name }}</h2>
         {% set pages = term.pages %}
-        {% set slice = 1 %}
+        {% set slice = 3 %}
         {% for page in pages | slice(end=slice) %}
             {{ macros::blog_link(page=page) }}
         {% endfor %}
