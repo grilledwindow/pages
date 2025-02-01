@@ -965,6 +965,16 @@ video {
   color: rgb(68 68 68 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#484222\] {
+  --tw-text-opacity: 1;
+  color: rgb(72 66 34 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#484232\] {
+  --tw-text-opacity: 1;
+  color: rgb(72 66 50 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#5a663a\] {
   --tw-text-opacity: 1;
   color: rgb(90 102 58 / var(--tw-text-opacity, 1));
@@ -995,6 +1005,11 @@ video {
   color: rgb(204 212 183 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#a8a283\] {
+  --tw-text-opacity: 1;
+  color: rgb(168 162 131 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#bbb\] {
   --tw-text-opacity: 1;
   color: rgb(187 187 187 / var(--tw-text-opacity, 1));
@@ -1008,36 +1023,6 @@ video {
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#ccc\] {
-  --tw-text-opacity: 1;
-  color: rgb(204 204 204 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#555\] {
-  --tw-text-opacity: 1;
-  color: rgb(85 85 85 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#483212\] {
-  --tw-text-opacity: 1;
-  color: rgb(72 50 18 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#484222\] {
-  --tw-text-opacity: 1;
-  color: rgb(72 66 34 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#a8a283\] {
-  --tw-text-opacity: 1;
-  color: rgb(168 162 131 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#484232\] {
-  --tw-text-opacity: 1;
-  color: rgb(72 66 50 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -1056,6 +1041,18 @@ video {
   text-decoration-thickness: 2px;
 }
 
+.underline-offset-2 {
+  text-underline-offset: 2px;
+}
+
+.underline-offset-8 {
+  text-underline-offset: 8px;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
 p {
   margin-top: 1.5rem;
   line-height: 1.75rem;
@@ -1063,7 +1060,7 @@ p {
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
-h1.blog-title, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   position: relative;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
@@ -1074,11 +1071,13 @@ h1.blog-title, h2, h3, h4, h5, h6 {
   font-family: Cotham;
 }
 
-h1.blog-title {
+h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-family: Inter;
 }
 
-h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   position: absolute;
   left: -1.8rem;
   width: 1rem;
@@ -1086,12 +1085,12 @@ h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::befor
 }
 
 @media (min-width: 768px) {
-  h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     left: -2.5rem;
   }
 }
 
-h1.blog-title::before {
+h1::before {
   content: 'h1';
   font-family: Cotham;
   top: 0.44rem;

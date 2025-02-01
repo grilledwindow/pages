@@ -6,20 +6,21 @@ p {
     @apply mt-6 leading-7 text-gray-700;
 }
 
-h1.blog-title, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     @apply mt-10 mb-4 h-fit font-medium relative align-bottom;
     font-family: Cotham;
 }
 
-h1.blog-title {
+h1 {
+    @apply text-3xl;
     font-family: Inter;
 }
 
-h1.blog-title::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     @apply opacity-60 w-4 absolute left-[-1.8rem] md:left-[-2.5rem];
 }
 
-h1.blog-title::before {
+h1::before {
     content: 'h1';
     font-family: Cotham;
     @apply text-[60%] top-[0.44rem];
