@@ -26,7 +26,7 @@
                 {{ macros::blog_link(page=page) }}
             {% endfor %}
 
-            <button class="bg-[#adba8f] hover:bg-[#a5b288] text-[#5a663a] mt-10 p-2 px-3 rounded-full"><a href="/blog" class="decoration-none">see all -></a></button>
+            <button class="bg-[#adba8f] hover:bg-[#a5b288] text-[#5a663a] mt-10 p-2 px-3 rounded-full"><a href="/blog" class="decoration-none">see all {{ all_blogs.page_count }} -></a></button>
         </div>
 {% endblock body %}
 
