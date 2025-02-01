@@ -15,13 +15,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Cotham;
 }
 
-h1 {
-    @apply text-3xl;
-    font-family: Inter;
-}
-
 h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     @apply opacity-60 w-4 absolute left-[-1.8rem] md:left-[-2.5rem];
+}
+
+h1 {
+    @apply text-3xl text-[#484232];
+    font-family: Inter;
 }
 
 h1::before {
@@ -30,14 +30,26 @@ h1::before {
     @apply text-[60%] top-[0.44rem];
 }
 
+h2 {
+    @apply text-3xl text-[#4D2B09];
+}
+
 h2::before {
     content: 'h2';
     @apply text-[60%] top-[0.187rem];
 }
 
+h3 {
+    @apply text-2xl text-[#2E3419];
+}
+
 h3::before {
     content: 'h3';
     @apply text-[70%] top-[0.21rem];
+}
+
+h4, h5, h6 {
+    @apply mb-2 text-xl text-[#333];
 }
 
 h4::before, h5::before, h6::before {
@@ -47,15 +59,3 @@ h4::before, h5::before, h6::before {
 h4::before { content: 'h4'; }
 h5::before { content: 'h5'; }
 h6::before { content: 'h6'; }
-
-h2 {
-    @apply text-3xl text-[#4D2B09];
-}
-
-h3 {
-    @apply text-2xl text-[#2E3419];
-}
-
-h4, h5, h6 {
-    @apply mb-2 text-xl text-[#333];
-}

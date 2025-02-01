@@ -7,7 +7,7 @@
 {% endblock head %}
 
 {% block body %}
-    <h1 class="mb-6 font-mono font-bold text-3xl text-[#484222]"><span class="text-[#a8a283]">/</span>{{ taxonomy.name }}</h1>
+    <h1 class="mb-6 mt-4 font-mono font-bold text-3xl text-[#484222]"><span class="text-[#a8a283]">/</span>{{ taxonomy.name }}</h1>
     {% set other_group = "tags" %}
     {% if taxonomy.name == "tags" %}
         {% set other_group = "series" %}

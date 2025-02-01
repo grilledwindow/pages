@@ -1067,12 +1067,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Cotham;
 }
 
-h1 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-family: Inter;
-}
-
 h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   position: absolute;
   left: -1.8rem;
@@ -1086,11 +1080,26 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   }
 }
 
+h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(72 66 50 / var(--tw-text-opacity, 1));
+  font-family: Inter;
+}
+
 h1::before {
   content: 'h1';
   font-family: Cotham;
   top: 0.44rem;
   font-size: 60%;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(77 43 9 / var(--tw-text-opacity, 1));
 }
 
 h2::before {
@@ -1099,10 +1108,25 @@ h2::before {
   font-size: 60%;
 }
 
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(46 52 25 / var(--tw-text-opacity, 1));
+}
+
 h3::before {
   content: 'h3';
   top: 0.21rem;
   font-size: 70%;
+}
+
+h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
 }
 
 h4::before, h5::before, h6::before {
@@ -1120,28 +1144,6 @@ h5::before {
 
 h6::before {
   content: 'h6';
-}
-
-h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(77 43 9 / var(--tw-text-opacity, 1));
-}
-
-h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  --tw-text-opacity: 1;
-  color: rgb(46 52 25 / var(--tw-text-opacity, 1));
-}
-
-h4, h5, h6 {
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
 }
 
 .hover\:bg-\[\#A8AE91\]:hover {
