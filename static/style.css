@@ -7,7 +7,7 @@ p {
 }
 
 ul {
-    @apply mt-6 pl-4 leading-7 text-gray-700 list-disc;
+    @apply mt-2 pl-4 leading-7 text-gray-700 list-disc;
 }
 
 p code {

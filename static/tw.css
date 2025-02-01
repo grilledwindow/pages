@@ -861,6 +861,10 @@ video {
   padding: 1rem;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1061,7 +1065,7 @@ p {
 }
 
 ul {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   list-style-type: disc;
   padding-left: 1rem;
   line-height: 1.75rem;
