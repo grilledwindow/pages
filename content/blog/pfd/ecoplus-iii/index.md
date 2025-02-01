@@ -14,26 +14,26 @@ In the third sprint, I added image upload functionality, and in the fourth sprin
 ## New Features
 In the last two sprints, here are the features we added:
 
-General \
+General
 - Model annotations with tooltips
 - Upcoming Events
 - Forgot password
 
-Community \
+Community
 - Editing, deleting, and leaving of community
 - Upload of profile and cover photos
 - Search by name
 
-Event \
+Event
 - Editing and deleting of event
 - Upload of profile and cover photos
 - Event location map 
 
-Account \
+Account
 - Editing of account details
 - Upload and delete profile photo
 
-Education \
+Education
 - Recycling Page
 - Interactive game
 
