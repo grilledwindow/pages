@@ -1069,6 +1069,18 @@ ul {
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
+p code {
+  border-radius: 0.17rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 214 184 / var(--tw-bg-opacity, 1));
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(86 85 72 / var(--tw-text-opacity, 1));
+}
+
 pre {
   margin-top: 2rem;
   max-height: 24rem;

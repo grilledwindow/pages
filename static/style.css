@@ -10,6 +10,10 @@ ul {
     @apply mt-6 pl-4 leading-7 text-gray-700 list-disc;
 }
 
+p code {
+    @apply py-0.5 px-1 rounded-[0.17rem] bg-[#D0D6B8] text-[#565548];
+}
+
 pre {
     @apply mt-8 p-3 text-sm md:text-base rounded-lg max-h-96 overflow-scroll;
 }
