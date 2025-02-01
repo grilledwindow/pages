@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {% set tab_title = "404" %}
+    {{ super() }}
+{% endblock head %}
+
+{% block body %}
+    <h1>Uh oh!</h1>
+    <p>It looks like the page you're looking for doesn't exist. Try these links instead:
+        <br />
+        <br />{{ macros::link(label="home", link="/", target="") }}
+        <br />{{ macros::link(label="blog: tags", link="/blog", target="") }}
+        <br />{{ macros::link(label="blog: series", link="/series", target="") }}
+    </p>
+{% endblock body %}
+
