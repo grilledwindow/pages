@@ -970,11 +970,6 @@ video {
   color: rgb(72 66 34 / var(--tw-text-opacity, 1));
 }
 
-.text-\[\#484232\] {
-  --tw-text-opacity: 1;
-  color: rgb(72 66 50 / var(--tw-text-opacity, 1));
-}
-
 .text-\[\#5a663a\] {
   --tw-text-opacity: 1;
   color: rgb(90 102 58 / var(--tw-text-opacity, 1));
@@ -1054,6 +1049,22 @@ pre {
   overflow: scroll;
   border-radius: 0.5rem;
   padding: 0.75rem;
+}
+
+img {
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  border-width: 2.8px;
+  --tw-border-opacity: 1;
+  border-color: rgb(160 159 146 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(216 222 192 / var(--tw-bg-opacity, 1));
+  padding: 0.5rem;
+}
+
+img:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 214 184 / var(--tw-bg-opacity, 1));
 }
 
 h1, h2, h3, h4, h5, h6 {
