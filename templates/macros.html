@@ -40,26 +40,22 @@
 
 {% macro blog_link(page) %}
 <div
-    class="block max-w-2xl mt-6 p-4 rounded-lg border-[2.8px] border-gray-00 border-[#A09F92] bg-[#D8DEC0] hover:bg-[#D0D6B8] cursor-pointer"
+    class="block max-w-2xl mt-6 p-3 md:p-4 rounded-lg border-[2.8px] border-gray-00 border-[#A09F92] bg-[#D8DEC0] hover:bg-[#D0D6B8] cursor-pointer"
     onclick={{ "location.href='" ~ page.path ~ "'" }}
 >
-    <span class="block text-[#363538] text-xl" style="font-family: Poppins">{{ page.title }}</span>
-    <div class="mt-4 text-gray-600 w-full flex justify-between items-end">
-        <div class="text-sm space-y-2">
-<!--cdc2af -->
-            {% if page.taxonomies.series %}
-                {% for series in page.taxonomies.series %}
-                    {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA5] hover:bg-[#BFBD95] text-[#6F6D45]") }}
-
-                {% endfor %}
-            {% endif %}
-            {% if page.taxonomies.tags %}
-                {% for tag in page.taxonomies.tags %}
-                    {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
-                {% endfor %}
-            {% endif %}
-        </div>
-        <span class="self-end mt-2 text-[#807070] text-right">{{ page.date | date(format="%e %b '%y") }}</span>
+    <span class="block text-[#363538] text-[1.17rem] md:text-xl" style="font-family: Poppins">{{ page.title }}</span>
+    <div class="mt-4 text-gray-600 w-full flex flex-wrap items-end space-y-2">
+        {% if page.taxonomies.series %}
+            {% for series in page.taxonomies.series %}
+                {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA5] hover:bg-[#BFBD95] text-[#6F6D45]") }}
+            {% endfor %}
+        {% endif %}
+        {% if page.taxonomies.tags %}
+            {% for tag in page.taxonomies.tags %}
+                {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
+            {% endfor %}
+        {% endif %}
+        <span class="ml-auto mt-2 text-[#807070] text-right">{{ page.date | date(format="%e %b '%y") }}</span>
     </div>
 </div>
 {% endmacro blog_link %}
