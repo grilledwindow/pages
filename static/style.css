@@ -39,7 +39,7 @@ h1 {
 h1::before {
     content: 'h1';
     font-family: Cotham;
-    @apply text-[60%] top-[0.44rem];
+    @apply text-[1.2rem] top-[1.5rem] leading-[0];
 }
 
 h2 {
@@ -48,7 +48,7 @@ h2 {
 
 h2::before {
     content: 'h2';
-    @apply text-[60%] top-[0.187rem];
+    @apply text-[1.15rem] top-[1.284rem] leading-[0];
 }
 
 h3 {
@@ -57,7 +57,7 @@ h3 {
 
 h3::before {
     content: 'h3';
-    @apply text-[70%] top-[0.21rem];
+    @apply text-[1.1rem] top-[1.154rem] leading-[0];
 }
 
 h4, h5, h6 {
