@@ -853,16 +853,16 @@ video {
   background-color: rgb(217 220 193 / var(--tw-bg-opacity, 1));
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-0 {
-  padding: 0px;
 }
 
 .px-10 {
@@ -1159,21 +1159,26 @@ h1 {
 h1::before {
   content: 'h1';
   font-family: Cotham;
-  top: 0.44rem;
-  font-size: 60%;
+  top: 0.9rem;
+  --tw-translate-y: -0.45rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  font-size: 1.2rem;
 }
 
 h2 {
   font-size: 1.875rem;
-  line-height: 2.25rem;
   --tw-text-opacity: 1;
   color: rgb(77 43 9 / var(--tw-text-opacity, 1));
+  line-height: 2rem;
+  vertical-align: bottom;
 }
 
 h2::before {
   content: 'h2';
-  top: 0.187rem;
-  font-size: 60%;
+  vertical-align: bottom;
+  font-size: 1.15rem;
+  line-height: 2rem;
+  /* @apply text-[1.15rem] translate-y-[0.19rem]; */
 }
 
 h3 {
@@ -1185,8 +1190,8 @@ h3 {
 
 h3::before {
   content: 'h3';
-  top: 0.21rem;
-  font-size: 70%;
+  top: 0.1rem;
+  font-size: 1.1rem;
 }
 
 h4, h5, h6 {

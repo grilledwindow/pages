@@ -7,20 +7,23 @@
 {% endblock head %}
 
 {% block body %}
-    {% if page.taxonomies.series %}
-        {% for series in page.taxonomies.series %}
-            {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#435337]") }}
-        {% endfor %}
-    {% endif %}
-    {% if page.taxonomies.tags %}
-        {% for tag in page.taxonomies.tags %}
-            {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
-        {% endfor %}
-    {% endif %}
+        <div class="space-y-2">
+            {% if page.taxonomies.series %}
+                {% for series in page.taxonomies.series %}
+                    {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#435337]") }}
+                {% endfor %}
+            {% endif %}
+            {% if page.taxonomies.tags %}
+                {% for tag in page.taxonomies.tags %}
+                    {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
+                {% endfor %}
+            {% endif %}
+        </div>
     <h1>{{ page.title }}</h1>
     <section class="mt-8 text-gray-600 flex flex-col space-y-1" style="font-family: Inter">
         <span class="block">{{ page.date | date(format="%e %b %Y") }}<span class="mx-2">•</span>{{ page.reading_time ~ " min read" }}</span>
     </section>
+
     {{ page.content | safe }}
 
     <div class="mt-20 w-full">
@@ -44,16 +47,18 @@
                     {{ macros::link(label="all blogs", link="/blog", target="") }}
                 </div>
             {% endif %}
-            {% if page.taxonomies.series %}
-                {% for series in page.taxonomies.series %}
-                    {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#435337]") }}
-                {% endfor %}
-            {% endif %}
-            {% if page.taxonomies.tags %}
-                {% for tag in page.taxonomies.tags %}
-                    {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
-                {% endfor %}
-            {% endif %}
+            <div class="space-y-2">
+                {% if page.taxonomies.series %}
+                    {% for series in page.taxonomies.series %}
+                        {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#435337]") }}
+                    {% endfor %}
+                {% endif %}
+                {% if page.taxonomies.tags %}
+                    {% for tag in page.taxonomies.tags %}
+                        {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
+                    {% endfor %}
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endblock body %}
