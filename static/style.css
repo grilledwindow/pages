@@ -57,7 +57,7 @@ h3 {
 
 h3::before {
     content: 'h3';
-    @apply text-[1.1rem] top-[1.154rem] leading-[0];
+    @apply text-[1.1rem] top-[1.1rem] leading-[0];
 }
 
 h4, h5, h6 {
