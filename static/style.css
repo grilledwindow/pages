@@ -18,6 +18,11 @@ ol {
     @apply py-0.5 px-1 rounded-[0.17rem] bg-[#D0D6B8] text-[#565548];
 }
 
+
+p + pre {
+    @apply mt-4;
+}
+
 pre + p {
     @apply mt-1;
 }
