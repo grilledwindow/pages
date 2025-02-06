@@ -101,6 +101,7 @@ I then set the session as shown:
 const { session, error: sessionError } = await supabase.auth.setSession(clientSession.refresh_token);
 const { data: newSession } = await supabase.auth.refreshSession();
 ```
+\
 I had to use this method because the Supabase JavaScript client is more suited for using it on the client-side, but it is only safe to do so if I've added proper Row-Level Security (RLS) on the database, which I didn't have time to implement.
 
 ### Account page UI

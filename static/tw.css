@@ -1097,6 +1097,10 @@ ol {
   color: rgb(86 85 72 / var(--tw-text-opacity, 1));
 }
 
+pre + p {
+  margin-top: 0.25rem;
+}
+
 pre {
   margin-top: 2rem;
   max-height: 24rem;
