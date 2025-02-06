@@ -6,6 +6,10 @@ p {
     @apply mt-6 leading-7 text-gray-700;
 }
 
+h4 + p, h5 + p, h6 + p {
+    @apply mt-3;
+}
+
 ul, ol {
     @apply mt-2 pl-4 leading-7 text-gray-700 list-disc;
 }
@@ -17,7 +21,6 @@ ol {
 :not(pre) > code {
     @apply py-0.5 px-1 rounded-[0.17rem] bg-[#D0D6B8] text-[#565548];
 }
-
 
 p + pre {
     @apply mt-4;

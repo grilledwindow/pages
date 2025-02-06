@@ -1072,6 +1072,10 @@ p {
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
+h4 + p, h5 + p, h6 + p {
+  margin-top: 0.75rem;
+}
+
 ul, ol {
   margin-top: 0.5rem;
   list-style-type: disc;
