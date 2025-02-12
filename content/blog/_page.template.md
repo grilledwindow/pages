@@ -5,6 +5,6 @@ render = false
 
 [taxonomies]
 series = []
-tags = ["all"]
+tags = []
 +++
 
