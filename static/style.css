@@ -1,6 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Cotham";
+  src: url("/CothamSans.otf");
+}
+
+@font-face {
+  font-family: "Bagnard";
+  src: url("/Bagnard.otf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/Inter/Inter-Regular.woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Plex";
+  src: url("/PlexMono/IBMPlexMono-Regular.ttf");
+}
 
 p {
     @apply mt-6 leading-7 text-gray-700;
@@ -10,6 +33,7 @@ h4 + p, h5 + p, h6 + p {
     @apply mt-3;
 }
 
+/* TODO: fix list-disc affecting header */
 ul, ol {
     @apply mt-2 pl-4 leading-7 text-gray-700 list-disc;
 }
