@@ -1,11 +1,11 @@
 {% import "components/buttons.html" as buttons %}
 
 {% macro link(label="undefined", link="", css="", target="_blank") %}
-<a class="text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
+<a class=" {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
 {% endmacro link %}
 
 {% macro footer_link(label="undefined", link="", css="", target="_blank") %}
-<a class="text-[#bbb] hover:text-[#4d522c] decoration-[#aaa] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
+<a class=" {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
 {% endmacro footer_link %}
 
 <!-- relative_path: blog/build-the-site.md -->

@@ -2,27 +2,39 @@
 
 @font-face {
   font-family: "Cotham";
-  src: url("/CothamSans.otf");
+  src: url("/fonts/CothamSans.otf");
 }
 
 @font-face {
   font-family: "Bagnard";
-  src: url("/Bagnard.otf");
+  src: url("/fonts/Bagnard.otf");
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("/Inter/Inter-Regular.woff");
+  src: url("/fonts/Inter/Inter-Regular.woff");
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url("/Poppins/Poppins-Regular.ttf");
+  src: url("/fonts/Poppins/Poppins-Regular.ttf");
 }
 
 @font-face {
   font-family: "Plex";
-  src: url("/PlexMono/IBMPlexMono-Regular.ttf");
+  src: url("/fonts/PlexMono/IBMPlexMono-Regular.ttf");
+}
+
+ footer { @apply bg-[#666558] text-[#CCD4B7]; }
+ body { @apply bg-[#DCE4C7] font-[Inter]; }
+ header { @apply bg-[#CCD4B7] text-[#6d725c]; }
+ main :not(button) > a { @apply underline decoration-2 text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296]; }
+ footer a { @apply underline decoration-2 text-[#bbb] hover:text-[#4d522c] decoration-[#aaa] hover:bg-[#adb296] hover:decoration-[#adb296]; }
+
+ .btn-series { @apply bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#6F6D40]; }
+ .btn-tag { @apply bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#646A4D]; }
+.wrapper {
+    @apply max-w-[960px] mx-auto px-10 md:px-16 ;
 }
 
 p {
@@ -33,15 +45,8 @@ h4 + p, h5 + p, h6 + p {
     @apply mt-3;
 }
 
-/* TODO: fix list-disc affecting header */
-main {
-    ul, ol {
-        @apply pl-4 list-disc;
-    }
-}
-
 ul, ol {
-    @apply mt-2 leading-7 text-gray-700;
+    @apply mt-2 pl-4 leading-7 text-gray-700 list-["-__"];
 }
 
 ol {
@@ -70,7 +75,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply mt-10 mb-4 h-fit font-medium relative align-bottom;
+    @apply mt-10 h-fit font-medium relative align-bottom;
     font-family: Cotham;
 }
 

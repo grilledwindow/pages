@@ -650,12 +650,6 @@
   .h-1\/3 {
     height: calc(1/3 * 100%);
   }
-  .h-4 {
-    height: calc(var(--spacing) * 4);
-  }
-  .h-4\/5 {
-    height: calc(4/5 * 100%);
-  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
@@ -704,14 +698,11 @@
   .resize {
     resize: both;
   }
+  .list-\[\"-__\"\] {
+    list-style-type: "-  ";
+  }
   .list-\[lower-roman\] {
     list-style-type: lower-roman;
-  }
-  .list-disc {
-    list-style-type: disc;
-  }
-  .list-none {
-    list-style-type: none;
   }
   .flex-col {
     flex-direction: column;
@@ -1001,8 +992,14 @@
   .text-\[\#5a663a\] {
     color: #5a663a;
   }
+  .text-\[\#6F6D40\] {
+    color: #6F6D40;
+  }
   .text-\[\#6F6D45\] {
     color: #6F6D45;
+  }
+  .text-\[\#6d725c\] {
+    color: #6d725c;
   }
   .text-\[\#7E8264\] {
     color: #7E8264;
@@ -1012,6 +1009,9 @@
   }
   .text-\[\#444\] {
     color: #444;
+  }
+  .text-\[\#646A4D\] {
+    color: #646A4D;
   }
   .text-\[\#674d40\] {
     color: #674d40;
@@ -1234,23 +1234,103 @@
 }
 @font-face {
   font-family: "Cotham";
-  src: url("/CothamSans.otf");
+  src: url("/fonts/CothamSans.otf");
 }
 @font-face {
   font-family: "Bagnard";
-  src: url("/Bagnard.otf");
+  src: url("/fonts/Bagnard.otf");
 }
 @font-face {
   font-family: "Inter";
-  src: url("/Inter/Inter-Regular.woff");
+  src: url("/fonts/Inter/Inter-Regular.woff");
 }
 @font-face {
   font-family: "Poppins";
-  src: url("/Poppins/Poppins-Regular.ttf");
+  src: url("/fonts/Poppins/Poppins-Regular.ttf");
 }
 @font-face {
   font-family: "Plex";
-  src: url("/PlexMono/IBMPlexMono-Regular.ttf");
+  src: url("/fonts/PlexMono/IBMPlexMono-Regular.ttf");
+}
+footer {
+  background-color: #666558;
+  color: #CCD4B7;
+}
+body {
+  background-color: #DCE4C7;
+  font-family: Inter;
+}
+header {
+  background-color: #CCD4B7;
+  color: #6d725c;
+}
+main :not(button) > a {
+  color: #7E8264;
+  text-decoration-line: underline;
+  text-decoration-color: #9EA284;
+  text-decoration-thickness: 2px;
+  &:hover {
+    @media (hover: hover) {
+      background-color: #adb296;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: #4d522c;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      text-decoration-color: #adb296;
+    }
+  }
+}
+footer a {
+  color: #bbb;
+  text-decoration-line: underline;
+  text-decoration-color: #aaa;
+  text-decoration-thickness: 2px;
+  &:hover {
+    @media (hover: hover) {
+      background-color: #adb296;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: #4d522c;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      text-decoration-color: #adb296;
+    }
+  }
+}
+.btn-series {
+  background-color: #CFCDA0;
+  color: #6F6D40;
+  &:hover {
+    @media (hover: hover) {
+      background-color: #C9C79A;
+    }
+  }
+}
+.btn-tag {
+  background-color: #C4CAAD;
+  color: #646A4D;
+  &:hover {
+    @media (hover: hover) {
+      background-color: #BCC2A5;
+    }
+  }
+}
+.wrapper {
+  margin-inline: auto;
+  max-width: 960px;
+  padding-inline: calc(var(--spacing) * 10);
+  @media (width >= 48rem) {
+    padding-inline: calc(var(--spacing) * 16);
+  }
 }
 p {
   margin-top: calc(var(--spacing) * 6);
@@ -1261,14 +1341,10 @@ p {
 h4 + p, h5 + p, h6 + p {
   margin-top: calc(var(--spacing) * 3);
 }
-main {
-  ul, ol {
-    list-style-type: disc;
-    padding-left: calc(var(--spacing) * 4);
-  }
-}
 ul, ol {
   margin-top: calc(var(--spacing) * 2);
+  list-style-type: "-  ";
+  padding-left: calc(var(--spacing) * 4);
   --tw-leading: calc(var(--spacing) * 7);
   line-height: calc(var(--spacing) * 7);
   color: var(--color-gray-700);
@@ -1322,7 +1398,6 @@ img {
 h1, h2, h3, h4, h5, h6 {
   position: relative;
   margin-top: calc(var(--spacing) * 10);
-  margin-bottom: calc(var(--spacing) * 4);
   height: fit-content;
   vertical-align: bottom;
   --tw-font-weight: var(--font-weight-medium);
