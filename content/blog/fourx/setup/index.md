@@ -43,7 +43,7 @@ end
 `.config/nvim/lua/plugins/treesitter.lua`
 
 ### mise
-I decided to try [mise](https://github.com/jdx/mise) because Void's version of `erlang` wasn't up to date.
+I decided to try {{ link(label="mise", link="https://github.com/jdx/mise") }} because Void's version of `erlang` wasn't up to date.
 However, I was faced with errors right off the bat.
 `automake` and `autoconf` were missing and caused errors which were fixed simply by installing the packages.
 I was told no `curses` library was available, but `xbps-query -Rs curses` showed that I had `ncurses` installed,
