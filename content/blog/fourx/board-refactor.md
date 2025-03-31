@@ -1,6 +1,6 @@
 +++
 title = "FourX: Better Board and Algorithms"
-date = 2025-03-28
+date = 2025-03-31
 
 [taxonomies]
 series = ["fourx"]
