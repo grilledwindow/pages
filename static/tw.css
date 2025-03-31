@@ -1065,6 +1065,22 @@ video {
   text-decoration-thickness: 2px;
 }
 
+p > a {
+  --tw-text-opacity: 1;
+  color: rgb(126 130 100 / var(--tw-text-opacity, 1));
+  text-decoration-line: underline;
+  text-decoration-color: #9EA284;
+  text-decoration-thickness: 2px;
+}
+
+p > a:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(173 178 150 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(77 82 44 / var(--tw-text-opacity, 1));
+  text-decoration-color: #adb296;
+}
+
 p {
   margin-top: 1.5rem;
   line-height: 1.75rem;

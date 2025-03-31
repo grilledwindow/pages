@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+p > a {
+  @apply text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2;
+}
+
 p {
     @apply mt-6 leading-7 text-gray-700;
 }
