@@ -1,93 +1,110 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-p > a {
-  @apply text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2;
+@theme {
+  --font-sans: Inter, Cotham, Poppins, sans-serif;
+  --font-serif: Bagnard, serif;
+  --font-mono: Plex, monospace;
+  --color-1: #63474d;
+  --color-2: #dc9596;
+  --color-3: #aac0aa;
+  --color-4: #466362;
+  --color-5: #e3ccbd;
 }
 
-p {
-    @apply mt-6 leading-7 text-gray-700;
-}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 
-h4 + p, h5 + p, h6 + p {
+  @font-face {
+    font-family: "Cotham";
+    src: url("CothamSans.otf");
+  }
+
+  @font-face {
+    font-family: "Bagnard";
+    src: url("/Bagnard.otf");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    src: url("Inter/Inter-Regular.woff");
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("/Poppins/Poppins-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Plex";
+    src: url("/PlexMono/IBMPlexMono-Regular.ttf");
+  }
+
+  main p > a {
+    @apply text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2;
+  }
+
+  p {
+    @apply mt-6 leading-7 text-gray-700 font-sans;
+  }
+
+  h4 + p, h5 + p, h6 + p {
     @apply mt-3;
-}
+  }
 
-ul, ol {
-    @apply mt-2 pl-4 leading-7 text-gray-700 list-disc;
-}
+  main > ul { @apply mt-2 pl-4 leading-7 text-gray-700 list-disc }
+  main > ol { @apply mt-2 pl-4 leading-7 text-gray-700 list-[lower-roman] }
 
-ol {
-    @apply list-[lower-roman];
-}
-
-:not(pre) > code {
+  :not(pre) > code {
     @apply py-0.5 px-1 rounded-[0.17rem] bg-[#D0D6B8] text-[#565548];
-}
+  }
 
-p + pre {
+  p + pre {
     @apply mt-4;
-}
+  }
 
-pre + p {
+  pre + p {
     @apply mt-1;
-}
+  }
 
-pre {
+  pre {
     @apply mt-8 p-3 text-sm md:text-base rounded-lg max-h-96 overflow-scroll;
-}
+  }
 
-img {
+  img {
     @apply p-0 md:p-2 mb-2 rounded-lg border-[2.8px] border-[#A09F92] bg-[#D8DEC0] hover:bg-[#D0D6B8];
-}
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply mt-10 mb-4 h-fit font-medium relative align-bottom font-[Cotham];
+  }
 
-h1, h2, h3, h4, h5, h6 {
-    @apply mt-10 mb-4 h-fit font-medium relative align-bottom;
-    font-family: Cotham;
-}
-
-h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     @apply opacity-60 w-4 absolute left-[-1.8rem] md:left-[-2.5rem];
-}
+  }
 
-h1 {
-    @apply text-3xl text-[#484232];
-    font-family: Inter;
-}
-
-h1::before {
+  h1 { @apply text-3xl text-[#484232] font-[Inter] }
+  h1::before {
     content: 'h1';
-    font-family: Cotham;
-    @apply text-[1.2rem] top-[1.5rem] leading-[0];
-}
+    @apply font-[Cotham] text-[1.2rem] top-[1.5rem] leading-[0];
+  }
 
-h2 {
-    @apply text-3xl text-[#4D2B09];
-}
-
-h2::before {
+  h2 { @apply text-3xl text-[#4D2B09] }
+  h2::before {
     content: 'h2';
     @apply text-[1.15rem] top-[1.284rem] leading-[0];
-}
+  }
 
-h3 {
-    @apply text-2xl text-[#2E3419];
-}
-
-h3::before {
+  h3 { @apply text-2xl text-[#2E3419] }
+  h3::before {
     content: 'h3';
     @apply text-[1.1rem] top-[1.1rem] leading-[0];
+  }
+
+  h4, h5, h6 { @apply mb-2 text-xl text-[#333] }
+  h4::before, h5::before, h6::before { @apply text-[80%] top-[0.05rem] }
+  h4::before { content: 'h4'; }
+  h5::before { content: 'h5'; }
+  h6::before { content: 'h6'; }
 }
 
-h4, h5, h6 {
-    @apply mb-2 text-xl text-[#333];
-}
-
-h4::before, h5::before, h6::before {
-    @apply text-[80%] top-[0.05rem];
-}
-
-h4::before { content: 'h4'; }
-h5::before { content: 'h5'; }
-h6::before { content: 'h6'; }
