@@ -10,12 +10,12 @@
         <div class="space-y-2">
             {% if page.taxonomies.series %}
                 {% for series in page.taxonomies.series %}
-                    {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#435337]") }}
+                    {{ buttons::series(label=series, link="/series/" ~ series) }}
                 {% endfor %}
             {% endif %}
             {% if page.taxonomies.tags %}
                 {% for tag in page.taxonomies.tags %}
-                    {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
+                    {{ buttons::tag(label=tag, link="/tags/" ~ tag) }}
                 {% endfor %}
             {% endif %}
         </div>
@@ -50,12 +50,12 @@
             <div class="space-y-2">
                 {% if page.taxonomies.series %}
                     {% for series in page.taxonomies.series %}
-                        {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA0] hover:bg-[#C9C79A] text-[#435337]") }}
+                        {{ buttons::series(label=series, link="/series/" ~ series) }}
                     {% endfor %}
                 {% endif %}
                 {% if page.taxonomies.tags %}
                     {% for tag in page.taxonomies.tags %}
-                        {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
+                        {{ buttons::tag(label=tag, link="/tags/" ~ tag) }}
                     {% endfor %}
                 {% endif %}
             </div>

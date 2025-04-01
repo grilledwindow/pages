@@ -39,7 +39,7 @@
   html > :not(pre) { @apply text-[#3D4039]  } 
   
   main p > a {
-    @apply text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2;
+    @apply text-[#5D604A] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2;
   }
 
   p { @apply mt-6 leading-7 font-sans }
@@ -52,7 +52,7 @@
   main > ol { @apply mt-2 pl-4 leading-7 list-[lower-roman] }
 
   :not(pre) > code {
-    @apply py-0.5 px-1 rounded-[0.17rem] bg-[#D0D6B8] text-[#565548];
+    @apply py-0.5 px-1 rounded-[0.17rem] bg-[#d5d3bb] text-[#565548];
   }
 
   p + pre { @apply mt-4 }

@@ -11,22 +11,24 @@
         <div class="w-full">
             <h2 class="mb-6 mt-0 before:none">About</h2>
             <p>Hello, and welcome to my wonderful website! My name is Xavier and I enjoy coding. I created this website to express my aesthetic and to write about my projects. I'm currently in NS :') waiting for uni to start. In the mean time, I work on small projects where I can.</p>
-            <button class="bg-[#adba8f] hover:bg-[#a5b288] text-[#5a663a] mt-10 p-2 px-3 rounded-full"><a href="/about" class="decoration-none">full story -></a></button>
+            <button class="bg-[#c6caac] hover:bg-[#b7ba9c] text-[#6a764a] mt-10 p-2 px-3 rounded-full"><a href="/about" class="decoration-none">full story -></a></button>
         </div>
         <div class="mt-16 w-full">
             <h2 class="mb-6 mt-0">Blog</h2>
-            <p class="mt-6">
+            <p class="my-6">
                 {% set n = 5 %}
                 Viewing latest {{ n }} - 
                 {{ macros::link(label="see all", link="/blog", target="") }}
             </p>
 
+            <!-- <hr class="max-w-2xl border-t-2 border-t-solid border-t-[#D1cfb8]" /> -->
             {% set all_blogs = get_taxonomy_term(kind="tags", term="all") %}
             {% for page in all_blogs.pages | slice(end=n) %}
                 {{ macros::blog_link(page=page) }}
+                <!-- <hr class="max-w-2xl border-t-2 border-t-solid border-t-[#D1cfb8]" /> -->
             {% endfor %}
 
-            <button class="bg-[#adba8f] hover:bg-[#a5b288] text-[#5a663a] mt-10 p-2 px-3 rounded-full"><a href="/blog" class="decoration-none">see all {{ all_blogs.page_count }} -></a></button>
+            <button class="bg-[#c6caac] hover:bg-[#b7ba9c] text-[#6a764a] mt-10 p-2 px-3 rounded-full"><a href="/blog" class="decoration-none">see all {{ all_blogs.page_count }} -></a></button>
         </div>
 {% endblock body %}
 

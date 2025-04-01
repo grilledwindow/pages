@@ -1,4 +1,8 @@
 <!-- (label, link) -->
 {% macro tag(label, link, css="") %}
-<button class="rounded-full mr-1.5 md:mr-2 py-1 px-3 text-sm md:text-md font-sans {{ css }}"><a href={{ link }} class="">{{ label }}</a></button>
+<button class="rounded-full mr-1.5 md:mr-2 py-1 px-3 text-[#6c7066] text-sm md:text-md font-sans bg-[#d1cfb8] hover:bg-[#c1bfa8]"><a href={{ link }} class="">{{ label }}</a></button>
+{% endmacro tag %}
+
+{% macro series(label, link, css="") %}
+<button class="rounded-full mr-1.5 md:mr-2 py-1 px-3 text-[#6e685a] text-sm md:text-md font-sans bg-[#DED3B6] hover:bg-[#c1bfa8]"><a href={{ link }} class="">{{ label }}</a></button>
 {% endmacro tag %}

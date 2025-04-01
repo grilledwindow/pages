@@ -226,6 +226,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-6 {
+    margin-block: calc(var(--spacing) * 6);
+  }
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
@@ -461,6 +464,10 @@
     border-style: var(--tw-border-style);
     border-width: 2.8px;
   }
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
+  }
   .border-b-0 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 0px;
@@ -471,8 +478,17 @@
   .border-gray-500 {
     border-color: var(--color-gray-500);
   }
-  .bg-\[\#666558\] {
-    background-color: #666558;
+  .border-t-\[\#D1cfb8\] {
+    border-top-color: #D1cfb8;
+  }
+  .bg-\[\#656458\] {
+    background-color: #656458;
+  }
+  .bg-\[\#656468\] {
+    background-color: #656468;
+  }
+  .bg-\[\#919683\] {
+    background-color: #919683;
   }
   .bg-\[\#B8BEA1\] {
     background-color: #B8BEA1;
@@ -483,29 +499,17 @@
   .bg-\[\#C4CAAD\] {
     background-color: #C4CAAD;
   }
-  .bg-\[\#CCD4B7\] {
-    background-color: #CCD4B7;
-  }
-  .bg-\[\#CFCDA0\] {
-    background-color: #CFCDA0;
-  }
-  .bg-\[\#CFCDA5\] {
-    background-color: #CFCDA5;
-  }
-  .bg-\[\#D0D6B8\] {
-    background-color: #D0D6B8;
-  }
   .bg-\[\#D8DEC0\] {
     background-color: #D8DEC0;
   }
-  .bg-\[\#DCE4C7\] {
-    background-color: #DCE4C7;
+  .bg-\[\#DED3B6\] {
+    background-color: #DED3B6;
   }
-  .bg-\[\#DCE4D7\] {
-    background-color: #DCE4D7;
+  .bg-\[\#E3E1CD\] {
+    background-color: #E3E1CD;
   }
-  .bg-\[\#E5E7D4\] {
-    background-color: #E5E7D4;
+  .bg-\[\#E9E7D3\] {
+    background-color: #E9E7D3;
   }
   .bg-\[\#EBEECF\] {
     background-color: #EBEECF;
@@ -518,6 +522,21 @@
   }
   .bg-\[\#b5ca92\] {
     background-color: #b5ca92;
+  }
+  .bg-\[\#bec2a4\] {
+    background-color: #bec2a4;
+  }
+  .bg-\[\#c6caac\] {
+    background-color: #c6caac;
+  }
+  .bg-\[\#ced2b4\] {
+    background-color: #ced2b4;
+  }
+  .bg-\[\#d1cfb8\] {
+    background-color: #d1cfb8;
+  }
+  .bg-\[\#d5d3bb\] {
+    background-color: #d5d3bb;
   }
   .bg-\[\#d9dcc1\] {
     background-color: #d9dcc1;
@@ -594,6 +613,9 @@
   .font-\[Inter\] {
     font-family: Inter;
   }
+  .font-\[Poppins\] {
+    font-family: Poppins;
+  }
   .font-mono {
     font-family: var(--font-mono);
   }
@@ -669,11 +691,29 @@
   .text-\[\#4D2B09\] {
     color: #4D2B09;
   }
+  .text-\[\#4a4d38\] {
+    color: #4a4d38;
+  }
+  .text-\[\#5D604A\] {
+    color: #5D604A;
+  }
   .text-\[\#5a663a\] {
     color: #5a663a;
   }
-  .text-\[\#6F6D45\] {
-    color: #6F6D45;
+  .text-\[\#5e5a4d\] {
+    color: #5e5a4d;
+  }
+  .text-\[\#5e5746\] {
+    color: #5e5746;
+  }
+  .text-\[\#6a764a\] {
+    color: #6a764a;
+  }
+  .text-\[\#6c7066\] {
+    color: #6c7066;
+  }
+  .text-\[\#6e685a\] {
+    color: #6e685a;
   }
   .text-\[\#7E8264\] {
     color: #7E8264;
@@ -748,6 +788,13 @@
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .hover\:bg-\[\#999e7a\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #999e7a;
+      }
+    }
+  }
   .hover\:bg-\[\#A8AE91\] {
     &:hover {
       @media (hover: hover) {
@@ -762,31 +809,10 @@
       }
     }
   }
-  .hover\:bg-\[\#BCC2A5\] {
+  .hover\:bg-\[\#DCD9C9\] {
     &:hover {
       @media (hover: hover) {
-        background-color: #BCC2A5;
-      }
-    }
-  }
-  .hover\:bg-\[\#BFBD95\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #BFBD95;
-      }
-    }
-  }
-  .hover\:bg-\[\#C9C79A\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #C9C79A;
-      }
-    }
-  }
-  .hover\:bg-\[\#D0D6B8\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #D0D6B8;
+        background-color: #DCD9C9;
       }
     }
   }
@@ -801,6 +827,34 @@
     &:hover {
       @media (hover: hover) {
         background-color: #adb296;
+      }
+    }
+  }
+  .hover\:bg-\[\#adb389\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #adb389;
+      }
+    }
+  }
+  .hover\:bg-\[\#b7ba9c\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #b7ba9c;
+      }
+    }
+  }
+  .hover\:bg-\[\#c1bfa8\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #c1bfa8;
+      }
+    }
+  }
+  .hover\:bg-\[\#c7caac\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #c7caac;
       }
     }
   }
@@ -914,7 +968,7 @@
     color: #3D4039;
   }
   main p > a {
-    color: #7E8264;
+    color: #5D604A;
     text-decoration-line: underline;
     text-decoration-color: #9EA284;
     text-decoration-thickness: 2px;
@@ -959,7 +1013,7 @@
   }
   :not(pre) > code {
     border-radius: 0.17rem;
-    background-color: #D0D6B8;
+    background-color: #d5d3bb;
     padding-inline: calc(var(--spacing) * 1);
     padding-block: calc(var(--spacing) * 0.5);
     color: #565548;

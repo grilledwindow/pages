@@ -40,19 +40,19 @@
 
 {% macro blog_link(page) %}
 <div
-    class="block max-w-2xl mt-6 p-3 md:p-4 rounded-lg border-[2.8px] border-gray-00 border-[#A09F92] bg-[#D8DEC0] hover:bg-[#D0D6B8] cursor-pointer"
+    class="block max-w-2xl mt-6 p-3 md:p-4 rounded-lg border-[2.8px] border-[#A09F92] bg-[#E3E1CD] hover:bg-[#DCD9C9] cursor-pointer"
     onclick={{ "location.href='" ~ page.path ~ "'" }}
 >
-    <span class="block text-[#363538] text-[1.17rem] md:text-xl" style="font-family: Poppins">{{ page.title }}</span>
-    <div class="mt-2 md:mt-4 text-gray-600 w-full flex flex-wrap items-end space-y-2">
+    <span class="font-[Poppins] block text-[#363538] text-[1.17rem] md:text-xl">{{ page.title }}</span>
+    <div class="mt-2 md:mt-4 w-full flex flex-wrap items-end space-y-2">
         {% if page.taxonomies.series %}
             {% for series in page.taxonomies.series %}
-                {{ buttons::tag(label=series, link="/series/" ~ series, css="bg-[#CFCDA5] hover:bg-[#BFBD95] text-[#6F6D45]") }}
+                {{ buttons::series(label=series, link="/series/" ~ series) }}
             {% endfor %}
         {% endif %}
         {% if page.taxonomies.tags %}
             {% for tag in page.taxonomies.tags %}
-                {{ buttons::tag(label=tag, link="/tags/" ~ tag, css="bg-[#C4CAAD] hover:bg-[#BCC2A5] text-[#444]") }}
+                {{ buttons::tag(label=tag, link="/tags/" ~ tag) }}
             {% endfor %}
         {% endif %}
         <span class="ml-auto mt-2 text-[#807070] text-right">{{ page.date | date(format="%e %b '%y") }}</span>
