@@ -20,7 +20,7 @@
             {% endif %}
         </div>
     <h1>{{ page.title }}</h1>
-    <section class="mt-8 text-gray-600 flex flex-col space-y-1 font-sans">
+    <section class="mt-8 flex flex-col space-y-1 font-sans">
         <span class="block">{{ page.date | date(format="%e %b %Y") }}<span class="mx-2">•</span>{{ page.reading_time ~ " min read" }}</span>
     </section>
 
@@ -30,13 +30,13 @@
         <div class="md:flex md:justify-between">
             {% if page.higher %}
                 <div class="">
-                    <span class="text-gray-700 whitespace-pre">previous: </span>
+                    <span class="whitespace-pre">previous: </span>
                     {{ macros::link(label=page.higher.title, link=page.higher.permalink, target="") }}
                 </div>
             {% endif %}
             {% if page.lower %}
                 <div class="ml-8 md:ml-0 mt-3 md:mt-0">
-                    <span class="text-gray-700 whitespace-pre">next: </span>
+                    <span class="whitespace-pre">next: </span>
                     {{ macros::link(label=page.lower.title, link=page.lower.permalink, target="") }}
                 </div>
             {% endif %}

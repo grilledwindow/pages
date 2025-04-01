@@ -4,11 +4,6 @@
   --font-sans: Inter, Cotham, Poppins, sans-serif;
   --font-serif: Bagnard, serif;
   --font-mono: Plex, monospace;
-  --color-1: #63474d;
-  --color-2: #dc9596;
-  --color-3: #aac0aa;
-  --color-4: #466362;
-  --color-5: #e3ccbd;
 }
 
 @layer base {
@@ -41,44 +36,34 @@
     src: url("/PlexMono/IBMPlexMono-Regular.ttf");
   }
 
+  html > :not(pre) { @apply text-[#3D4039]  } 
+  
   main p > a {
     @apply text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2;
   }
 
-  p {
-    @apply mt-6 leading-7 text-gray-700 font-sans;
-  }
+  p { @apply mt-6 leading-7 font-sans }
 
   h4 + p, h5 + p, h6 + p {
     @apply mt-3;
   }
 
-  main > ul { @apply mt-2 pl-4 leading-7 text-gray-700 list-disc }
-  main > ol { @apply mt-2 pl-4 leading-7 text-gray-700 list-[lower-roman] }
+  main > ul { @apply mt-2 pl-4 leading-7 list-disc }
+  main > ol { @apply mt-2 pl-4 leading-7 list-[lower-roman] }
 
   :not(pre) > code {
     @apply py-0.5 px-1 rounded-[0.17rem] bg-[#D0D6B8] text-[#565548];
   }
 
-  p + pre {
-    @apply mt-4;
-  }
-
-  pre + p {
-    @apply mt-1;
-  }
-
-  pre {
-    @apply mt-8 p-3 text-sm md:text-base rounded-lg max-h-96 overflow-scroll;
-  }
+  p + pre { @apply mt-4 }
+  pre + p { @apply mt-1 }
+  pre { @apply mt-8 p-3 text-sm md:text-base rounded-lg max-h-96 overflow-scroll }
 
   img {
     @apply p-0 md:p-2 mb-2 rounded-lg border-[2.8px] border-[#A09F92] bg-[#D8DEC0] hover:bg-[#D0D6B8];
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply mt-10 mb-4 h-fit font-medium relative align-bottom font-[Cotham];
-  }
 
+  h1, h2, h3, h4, h5, h6 { @apply mt-10 mb-4 h-fit font-medium relative align-bottom font-[Cotham] }
   h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     @apply opacity-60 w-4 absolute left-[-1.8rem] md:left-[-2.5rem];
   }
