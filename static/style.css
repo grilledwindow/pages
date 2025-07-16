@@ -87,7 +87,7 @@
   }
 
   h4, h5, h6 { @apply mb-2 text-xl text-[#333] }
-  h4::before, h5::before, h6::before { @apply text-[80%] top-[0.05rem] }
+  h4::before, h5::before, h6::before { @apply text-[80%] top-[0.237rem] }
   h4::before { content: 'h4'; }
   h5::before { content: 'h5'; }
   h6::before { content: 'h6'; }
