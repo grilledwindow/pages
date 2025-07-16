@@ -7,13 +7,11 @@ series = []
 tags = ["all"]
 +++
 
-### Introduction
 I regularly use the command line, and yet I'm googling unfamiliar commands more often than not...
 So I decided to keep them all in one place here.
 
 #### Storage utilities
-`du -hd <depth> [target] | sort -h` - get sorted disk usage (to see where space is being used the most)
-`sudo vkpurge rm all` - (Void) remove unused kernel modules to free space
+`du -hd <depth> [target] | sort -h` - get sorted disk usage (to see where space is being used the most) \
 
 #### Archive
 `tar xvzf <archive.tar.gz>` - unarchive `.tar.gz`
@@ -25,7 +23,8 @@ So I decided to keep them all in one place here.
 ```
 
 #### VoidLinux
-`xbps-query -Rs <package>` - query all packages
-`xbps-query -s <package>` - query installed packages
-`sudo ln -s /etc/sv/<service> /var/service/` - enable `service`
+`xbps-query -Rs <package>` - query all packages \
+`xbps-query -s <package>` - query installed packages \
+`sudo ln -s /etc/sv/<service> /var/service/` - enable `service` \
+`sudo vkpurge rm all` - remove unused kernel modules to free space
 
