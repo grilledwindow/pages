@@ -1,41 +1,32 @@
 +++
 title = "About"
-date = 2025-02-02
+date = 2025-08-11
 template = "blog-page.html"
 +++
 
 ## Who?
-Hi, my name is Xavier. I'm a sentimental and reserved yet friendly fella.
-I let loose around the right company, but being introverted means I always need time alone to recharge.
-I'm a lil traditionalistic, finding comfort in things I'm used to and habits I've built up.
-My favourite is a going for a good workout, followed by a bomb ass $6 saba fish meal and shopping at NTUC for bananas and soy milk.
+Hi, my name is Xavier. I'm a sentimental and reserved person :) \
+I've just finished two dreadful yet wonderful years of NS (woohoo!) \
+I underwent a shoulder surgery in July 2025 that'll take months to recover.
+So instead of starting uni right after army, I opted to start a year later.
+This gap year'll allow me time to recuperate, build projects and explore hobbies.
 
 ## What? Why?
-I really enjoy programming and so I made this website to share (mainly) about my programming journey.
-I think writing about my experiences fosters better learning and serves as a guide for my future self to reference.
-As such, I tried my best to design a warm, cozy website that myself and others would find soothing to read.
+Programming is a powerful and versatile skill, the freedom of which I've decided to create projects like this website.
+Reflecting on my ventures makes me learn better and makes for good future reference.
 
-This website is an expression of my personality. The muted colours represent calmness and subtlety, and the minimal design expresses my appreciation for a sense of order.
-Okay I tried to sound deep but actually I just really like the design and aesthetic.
+This website is also an expression of myself; muted colours for subtlety, minimalism a desire for order.
 
 ## Back in My Days...
-I used to tinker with mobile devices. I miserably failed to flash CyanogenMod on my mother's old Samsung Galaxy S3.
-Later on I managed to root and jailbreak my iPhone and Android tablet for the purpose of "hacking" games.
-I even made YouTube videos about them! Looking back, I'm surprised how quite tech-savvy I was for a 10-year-old boy.
+I tinkered with mobile devices for the purpose of "hacking" games.
+I even made YouTube videos about them - impressive for then 10-year-old me.
 I guess this is how my interest for technology sparked.
 
-In secondary school, I played around with different ROMs on my Android phones.
-I loved the customisation they brought on top of stock ROMs.
-If you're wondering, I've been daily-driving LineageOS on a Pixel 4 I got for cheap with a Pixel 6a as back-up!
-The battery life is horrendous but it's still buttery smooth. Idk, smartphones back in the day are more appealing to me.
-I also started learning to code in Python and was amazed at what it could do.
-During lessons, I would write code with pen and paper because I couldn't wait til I got home!
+I loved playing around with different Android ROMs as a secondary school kid.
+With an increased spending ability, I sometimes tinker with cheaper older models nowadays.
+I also learned to code in Python and was amazed with its capabilities and all the potential it had for me.
+Hardly containing my excitement, I would "code" on pen and paper during lessons.
 
-Naturally, I continued picking up more skills like Git, the CLI, Linux and new programming languages.
-I feel that it helped me learn better in polytechnic as I had a good foundation to build upon.
-I remember trying so many times to install Arch Linux so that I could be *cool* (sigh).
-Actually, it's given life to the laptop that got me through poly, which I still use!
-
-## Current Affairs
-I'm in NS now :') waiting to start uni. I try to work on small hobby projects so I don't get rusty, this website being my favourite one thus far!
+Following this passion led to a diploma in Information Technology, a culmination of skills and experiences a mere certificate cannot justify.
+It has brought me great joy and satisfaction, so I hope to follow this passion for as long as it is mine :)
 
