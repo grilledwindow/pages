@@ -1,5 +1,5 @@
 +++
-title = "Problems with Linux"
+title = "Troubleshooting Network Connectivity"
 date = 2025-09-11
 
 [taxonomies]
