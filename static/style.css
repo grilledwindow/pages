@@ -57,7 +57,7 @@
 
   p + pre { @apply mt-4 }
   pre + p { @apply mt-1 }
-  pre { @apply mt-8 p-3 text-sm md:text-base rounded-lg max-h-96 overflow-scroll }
+  pre { @apply mt-8 p-3 text-sm md:text-base rounded-lg max-h-96 overflow-auto }
 
   img {
     @apply p-0 md:p-2 mb-2 rounded-lg border-[2.8px] border-[#A09F92] bg-[#D8DEC0] hover:bg-[#D0D6B8];

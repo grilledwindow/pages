@@ -843,7 +843,7 @@
   pre {
     margin-top: calc(var(--spacing) * 8);
     max-height: calc(var(--spacing) * 96);
-    overflow: scroll;
+    overflow: auto;
     border-radius: var(--radius-lg);
     padding: calc(var(--spacing) * 3);
     font-size: var(--text-sm);
