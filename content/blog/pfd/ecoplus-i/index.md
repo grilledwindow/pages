@@ -54,8 +54,8 @@ I suggested a plant game to attract users and give them an incentive to come bac
 We won't be creating the plant game yet as it is something nice to have but not necessary.
 
 We had a discussion for the technologies we would be using.
-I suggested using {{ link(link="https://www.supabase.io", label="Supabase") }} as our Backend as a Service (BaaS) for storage, database management and authentication, and {{ link(link="https://www.netlify.com", label="Netlify") }} for our web hosting solution which has easy-to-use serverless functions.
-Kah Seng suggested using {{ link(link="https://tailwindcss.com/", label="TailwindCSS") }} for our front-end as it's modular and flexible compared to Bootstrap.
+I suggested using [Supabase](https://www.supabase.io) as our Backend as a Service (BaaS) for storage, database management and authentication, and [Netlify](https://www.netlify.com) for our web hosting solution which has easy-to-use serverless functions.
+Kah Seng suggested using [TailwindCSS](https://tailwindcss.com/) for our front-end as it's modular and flexible compared to Bootstrap.
 He also suggested using Firestore as our database instead of Supabase but I felt that using an SQL database would be better for this project than a NoSQL one.
 
 ## Going deeper
@@ -66,7 +66,7 @@ I chose to work on the database and web hosting since I suggested the technologi
 
 So far, it's going great, but what about our project's name? \
 We spent a good 1.5 hours deciding on it.
-We used a name generator, {{ link(link="https://namelix.com/", label="namelix") }} to aid our brainstorming.
+We used a name generator, [namelix](https://namelix.com/) to aid our brainstorming.
 Some of us saw the name "Seed Seed" and really liked it, but some were strongly opposed to this (ahem, Kah Seng).
 We came across other catchy names and went through multiple rounds of voting.
 It was tough to settle on a name when some members like it and others don't.

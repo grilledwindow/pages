@@ -8,8 +8,8 @@ tags = ["all", "web"]
 +++
 
 ## What, Why?
-{{ link(label="Zola", link="https://www.getzola.org/") }} is a static site generator (SSG) that is fast, intuitive, and highly customisable.
-This is Part 1 of the Zola {{ link(label="series", link="/series/zola", target="") }} where I share and explore how I make use of Zola to create my ideal blog. 
+[Zola](https://www.getzola.org/) is a static site generator (SSG) that is fast, intuitive, and highly customisable.
+This is Part 1 of the Zola [series](/series/zola) where I share and explore how I make use of Zola to create my ideal blog. 
 In this page, I'll share about the core concepts and designs Zola adopts that makes it fun to use.
 
 ### Markdown
@@ -76,7 +76,7 @@ For example, a `blog` section may display the posts it contains.
 #### Taxonomies
 One caveat of sections is that it isn't easy to fetch pages in nested sections to be grouped together.
 Hence, I took a different approach and decided to use `taxonomies` to organise my blog instead.
-For my website, I use {{ link(label="series", link="/series", target="") }} and {{ link(label="tags", link="/tags", target="") }} 
+For my website, I use [series](/series) and [tags](/tags) 
 taxonomies to categorise pages.
 
 
@@ -91,19 +91,19 @@ In `base.html`, a block named `body` is created and in `page.html`, the block is
     <header>
         ...
     </header>
-    {% block body %}
-    {% endblock body %}
+    {{ "{%" }} block body %}
+    {{ "{%" }} endblock body %}
 </body>
 </html>
 ```
 `templates/base.html`
 
 ```html
-{% extends "base.html" %}
+{{ "{%" }} extends "base.html" %}
 
-{% block body %}
+{{ "{%" }} block body %}
     {{ page.content | safe }}
-{% endblock body %}
+{{ "{%" }} endblock body %}
 ```
 `templates/page.html`
 
@@ -120,37 +120,73 @@ A button macro and shortcode pair is shown below. The macro takes two parameters
 `link` is used for the `href` attribute and defaults to the root of the site.
 The shortcode simply imports the macro and passes in the same parameters.
 
+* Edit: macros are now called components
+
+Old:
 ```html
-{% macro button(label, link="/") %}
-    <button><a href={{ link }}>{{ label }}</a></button>
-{% endmacro button %}
+{{ "{%" }} macro button(label, link="/") %}
+    {{ "<button><a href={{ link }}>{{ label }}</a></button>" }}
+{{ "{%" }} endmacro button %}
 ```
 `templates/macros.html`
 
+New:
 ```html
-{% import "macros.html" as macros %}
+{{ "{%" }} component button(label, link="/") %}
+    {{ "<button><a href={{ link }}>{{ label }}</a></button>" }}
+{{ "{%" }} endcomponent button %}
+```
+`templates/macros.html`
 
-{{ macros::button(label=label, link=link) }}
+Old:
+```html
+{{ "{%" }} import "macros.html" as macros %}
+
+{{ "{{" }} macros::button(label=label, link=link) }}
+```
+`templates/shortcodes/button.html`
+
+New:
+```html
+{{ "{{" }} <button label={label} link={link} /> }}
 ```
 `templates/shortcodes/button.html`
 
 
 Using the macro in a template is similar to using it in a shortcode as both are considered templates.
-```html
-{% import "macros.html" as macros %}
 
-{{ macros::button(label="Home") }}
-{{ macros::button(label="Blog", link="/blog") }}
+Old:
+```html
+{{ "{%" }} import "macros.html" as macros %}
+
+{{ "macros" }}::button(label="Home") }}
+{{ "macros" }}::button(label="Blog", link="/blog") }}
+```
+`templates/nav.html`
+
+New:
+```html
+{{ "{%" }} import "macros.html" as macros %}
+
+{{ "{{" }} <button label="Home" /> }}
+{{ "{{" }} <button label="Blog" link="/blog" /> }}
 ```
 `templates/nav.html`
 
 In Markdown, the name of the shortcode is the file name sans the extension. Importing shortcodes isn't necessary.
+
+Old:
 ```md
-Visit my {{/* button(label="Blog", link="/blog") */}}
+Visit my {{ "{{" }}/* button(label="Blog", link="/blog") */}}
+```
+
+New:
+```md
+{{ 'Visit my {{/* <button label="Blog" link="/blog" /> */}}' }}
 ```
 
 
 ## Conclusion
 This was a brief overview to what I *think* are the core concepts of Zola and the way I used them to create my blog.
-In subsequent posts of the Zola {{ link(label="series", link="/series/zola", target="") }},
+In subsequent posts of the Zola [series](/series/zola),
 I dive deeper into how I used taxonomies, integrated TailwindCSS, and created various design components.

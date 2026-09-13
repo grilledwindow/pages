@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 
 {% block head %}
     {% set tab_title = page.title %}
@@ -10,12 +9,12 @@
         <div class="space-y-2">
             {% if page.taxonomies.series %}
                 {% for series in page.taxonomies.series %}
-                    {{ buttons::series(label=series, link="/series/" ~ series) }}
+                    {{ <series label={series} link={"/series/" ~ series} /> }}
                 {% endfor %}
             {% endif %}
             {% if page.taxonomies.tags %}
                 {% for tag in page.taxonomies.tags %}
-                    {{ buttons::tag(label=tag, link="/tags/" ~ tag) }}
+                    {{ <tag label={tag} link={"/tags/" ~ tag} /> }}
                 {% endfor %}
             {% endif %}
         </div>
@@ -31,31 +30,31 @@
             {% if page.higher %}
                 <div class="">
                     <span class="whitespace-pre">previous: </span>
-                    {{ macros::link(label=page.higher.title, link=page.higher.permalink, target="") }}
+                    <a href={{ page.higher.permalink }}>{{ page.higher.title }}</a>
                 </div>
             {% endif %}
             {% if page.lower %}
                 <div class="ml-8 md:ml-0 mt-3 md:mt-0">
                     <span class="whitespace-pre">next: </span>
-                    {{ macros::link(label=page.lower.title, link=page.lower.permalink, target="") }}
+                    <a href={{ page.lower.permalink }}>{{ page.lower.title }}</a>
                 </div>
             {% endif %}
         </div>
         <div class="mt-8">
             {% if not page.lower and not page.higher %}
                 <div class="mb-6">
-                    {{ macros::link(label="all blogs", link="/blog", target="") }}
+                    <a href="/blog">all blogs</a>
                 </div>
             {% endif %}
             <div class="space-y-2">
                 {% if page.taxonomies.series %}
                     {% for series in page.taxonomies.series %}
-                        {{ buttons::series(label=series, link="/series/" ~ series) }}
+                        {{ <series label={series} link={"/series/" ~ series} /> }}
                     {% endfor %}
                 {% endif %}
                 {% if page.taxonomies.tags %}
                     {% for tag in page.taxonomies.tags %}
-                        {{ buttons::tag(label=tag, link="/tags/" ~ tag) }}
+                        {{ <tag label={tag} link={"/tags/" ~ tag} /> }}
                     {% endfor %}
                 {% endif %}
             </div>

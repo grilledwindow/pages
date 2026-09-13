@@ -38,8 +38,12 @@
 
   html > :not(pre) { @apply text-[#3D4039]  } 
   
-  main p > a {
+  a {
     @apply text-[#5D604A] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2;
+  }
+
+  button > a, nav a {
+    @apply decoration-0;
   }
 
   p { @apply mt-6 leading-7 font-sans }

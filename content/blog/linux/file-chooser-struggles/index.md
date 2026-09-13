@@ -19,7 +19,7 @@ The XDG Desktop Portal, developed originally for Flatpak applications for use wi
 There exists a number of portal backends like for GTK, Gnome, and KDE to name the popular ones.
 However, using a window manager (WM) instead of a full-fledged desktop envrionment, these don't quite apply to me.
 I navigate my machine with combinations of keypresses, and I'm in search for such a file manager to unify the experience.
-This led me to {{ link(label="Yazi", link="https://github.com/sxyazi/yazi") }}, one of the terminal user interface (TUI) file managers available.
+This led me to [Yazi](https://github.com/sxyazi/yazi), one of the terminal user interface (TUI) file managers available.
 It uses vi keybindings, which just feels natural.
 
 ### Getting the File Manager to Work

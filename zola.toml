@@ -7,10 +7,15 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# skip_content_templating = ["blog/zola/overview.md"]
+
 taxonomies = [
     { name = "tags", paginate_by = 20 },
     { name = "series", paginate_by = 20 }
 ]
+
+[markdown]
+external_links_target_blank = true
 
 [markdown.highlighting]
 theme = "everforest-dark"

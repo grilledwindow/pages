@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 
 {% block head %}
     {% set tab_title = taxonomy.name ~ ": " ~ term.name | capitalize %}
@@ -12,7 +11,7 @@
     {% if taxonomy.name == "tags" %}
         {% set other_group = "series" %}
     {% endif %}
-    <p class="text-lg text-gray-600 font-light">Blogs grouped by {{ taxonomy.name }}. View {{ macros::link(label=other_group | capitalize, link="/" ~ other_group, target="") }} instead.</p>
+    <p class="text-lg text-gray-600 font-light">Blogs grouped by {{ taxonomy.name }}. View <a href={{ "/" ~ other_group }}>{{ other_group | capitalize }}</a> instead.</p>
 
     <div class="mt-8 mb-12 flex items-center">
         {% set main_term_name = term.name %} <!-- to prevent confusion with loop variable `term` below -->
@@ -28,7 +27,7 @@
     </div>
 
     {% for page in paginator.pages %}
-        {{ macros::blog_link(page=page) }}
+        {{ <blog_link page={page} /> }}
     {% endfor %}
 
     <div class="w-full mt-16 flex justify-center space-x-2">

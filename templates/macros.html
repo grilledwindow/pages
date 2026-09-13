@@ -1,12 +1,15 @@
-{% import "components/buttons.html" as buttons %}
+{% component link(label="undefined", link="", css="", target="_blank") %}
+    <a class="text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2 {{ css }}"
+        href="{{ link | safe }}"
+        target={% if target == "" %}_self{% else %}{{ target }}{% endif %}
+    >
+        {{ label }}
+    </a>
+{% endcomponent link %}
 
-{% macro link(label="undefined", link="", css="", target="_blank") %}
-<a class="text-[#7E8264] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
-{% endmacro link %}
-
-{% macro footer_link(label="undefined", link="", css="", target="_blank") %}
+{% component footer_link(label="undefined", link="", css="", target="_blank") %}
 <a class="text-[#bbb] hover:text-[#4d522c] decoration-[#aaa] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2 {{ css }}" href="{{ link | safe }}" target={{ target }}>{{ label }}</a>
-{% endmacro footer_link %}
+{% endcomponent footer_link %}
 
 <!-- relative_path: blog/build-the-site.md -->
 <!-- colocated_path: -->
@@ -38,7 +41,7 @@
 <!-- translations: [] -->
 <!-- backlinks: []  -->
 
-{% macro blog_link(page) %}
+{% component blog_link(page) %}
 <div
     class="block max-w-2xl mt-6 p-3 md:p-4 rounded-lg border-[2.8px] border-[#A09F92] bg-[#E3E1CD] hover:bg-[#DCD9C9] cursor-pointer"
     onclick={{ "location.href='" ~ page.path ~ "'" }}
@@ -47,18 +50,18 @@
     <div class="mt-2 md:mt-4 w-full flex flex-wrap items-end space-y-2">
         {% if page.taxonomies.series %}
             {% for series in page.taxonomies.series %}
-                {{ buttons::series(label=series, link="/series/" ~ series) }}
+                {{ <series label={series} link={"/series/" ~ series} /> }}
             {% endfor %}
         {% endif %}
         {% if page.taxonomies.tags %}
             {% for tag in page.taxonomies.tags %}
-                {{ buttons::tag(label=tag, link="/tags/" ~ tag) }}
+                {{ <tag label={tag} link={"/tags/" ~ tag} /> }}
             {% endfor %}
         {% endif %}
         <span class="ml-auto mt-2 text-[#807070] text-right">{{ page.date | date(format="%e %b '%y") }}</span>
     </div>
 </div>
-{% endmacro blog_link %}
+{% endcomponent blog_link %}
 
 <!-- Alternative element with divider between title and tags/date sections -->
 
