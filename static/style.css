@@ -42,7 +42,7 @@
     @apply text-[#5D604A] hover:text-[#4d522c] decoration-[#9EA284] hover:bg-[#adb296] hover:decoration-[#adb296] underline decoration-2;
   }
 
-  button > a, nav a {
+  button > a, header a {
     @apply decoration-0;
   }
 
@@ -69,29 +69,32 @@
 
   h1, h2, h3, h4, h5, h6 { @apply mt-10 mb-4 h-fit font-medium relative align-bottom font-[Cotham] }
   h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
-    @apply opacity-60 w-4 absolute left-[-1.8rem] md:left-[-2.5rem];
+    @apply opacity-60 w-4 inline-block ml-[-2.05rem] mr-[1.05rem];
+    alignment-baseline: baseline;
   }
 
   h1 { @apply text-3xl text-[#484232] font-[Inter] }
   h1::before {
     content: 'h1';
-    @apply font-[Cotham] text-[1.2rem] top-[1.5rem] leading-[0];
+    @apply font-[Cotham] text-[1.2rem];
   }
 
   h2 { @apply text-3xl text-[#4D2B09] }
   h2::before {
     content: 'h2';
-    @apply text-[1.15rem] top-[1.284rem] leading-[0];
+    @apply text-[1.15rem];
+    /* @apply text-[1.15rem] top-[1.284rem] leading-[0]; */
   }
 
   h3 { @apply text-2xl text-[#2E3419] }
   h3::before {
     content: 'h3';
-    @apply text-[1.1rem] top-[1.1rem] leading-[0];
+    @apply text-[1.1rem];
+    /* @apply text-[1.1rem] top-[1.1rem] leading-[0]; */
   }
 
   h4, h5, h6 { @apply mb-2 text-xl text-[#333] }
-  h4::before, h5::before, h6::before { @apply text-[80%] top-[0.237rem] }
+  h4::before, h5::before, h6::before { @apply text-[80%] }
   h4::before { content: 'h4'; }
   h5::before { content: 'h5'; }
   h6::before { content: 'h6'; }
